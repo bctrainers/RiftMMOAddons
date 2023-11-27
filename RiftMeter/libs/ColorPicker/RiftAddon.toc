@@ -1,0 +1,20 @@
+Identifier = "ColorPicker"
+
+Name = "Color Picker"
+
+Description = "A color picker."
+
+Author = "Vince@BlackOut@Brutwacht"
+Email = "chuckySTAR@gmail.com"
+
+Version = "1.1"
+
+Environment = "2.4"
+
+RunOnStartup = {
+  "main.lua",
+}
+-- X-Curse-Packaged-Version: v1.2
+-- X-Curse-Project-Name: Rift Meter
+-- X-Curse-Project-ID: rift-meter
+-- X-Curse-Repository-ID: rift/rift-meter/mainline

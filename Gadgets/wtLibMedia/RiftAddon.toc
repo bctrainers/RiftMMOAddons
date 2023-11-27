@@ -1,0 +1,37 @@
+Identifier = "wtLibMedia"
+
+Name = "wtLibMedia"
+Description = "WT Media Library"
+
+Author = "Wildtide"
+Website = "http://www.wildtide.net"
+Email = "wildtide@wildtide.net"
+
+Version = "v0.9.4-beta"
+
+Environment = "1.10"
+
+RunOnStartup = 
+{
+  "wtMedia.lua",
+}
+
+SavedVariables = 
+{
+}
+
+Embed = 
+{
+}
+
+Dependencies = 
+{
+}
+-- X-Curse-Packaged-Version: v0.9.4-beta
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline
+-- X-Curse-Packaged-Version: v0.10.17
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline

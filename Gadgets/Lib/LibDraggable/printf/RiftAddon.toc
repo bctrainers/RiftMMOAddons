@@ -1,0 +1,27 @@
+Identifier = "printf"
+
+Version = "0.3-140213-19:15:19"
+
+Email = "riftaddons@seebs.net"
+
+Name = {
+  English = "printf",
+  French = "printf",
+  German = "printf",
+}
+NameShort = "printf"
+
+Description = {
+  English = "Provides sprintf(), printf(), and cprintf() functions."
+}
+
+RunOnStartup = {
+  "printf.lua"
+}
+
+Environment = { "1.11" }
+
+-- X-Curse-Packaged-Version: v0.10.17
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline

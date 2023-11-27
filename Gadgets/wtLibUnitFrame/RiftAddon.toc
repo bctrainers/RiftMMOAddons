@@ -1,0 +1,109 @@
+Identifier = "wtLibUnitFrame"
+
+Name = "wtLibUnitFrame"
+Description = "WT UnitFrame Library"
+
+Author = "Wildtide"
+Website = "http://www.wildtide.net"
+Email = "wildtide@wildtide.net"
+
+Version = "v0.5.51"
+
+Environment = "1.10"
+
+RunOnStartup = 
+{
+  "wtInitMedia.lua",
+  "wtUnitFrame.lua",
+  "wtUnitFrame_Bindings.lua",
+  "wtUnitFrame_Buffs.lua",
+  "wtUnitFrame_Creation.lua",
+  "wtUnitFrame_VirtualProperties.lua",
+  "wtUnitFrame_Macros.lua",
+  "wtUnitFrame_Resizable.lua",
+  "wtUnitFrame_Animation.lua",
+  "wtElement.lua",
+  "wtTemplate.lua",
+  "GJK.lua",
+  "elements/wtFrame.lua",
+  "elements/wtLabel.lua",
+  "elements/wtStaticLabel.lua",
+  "elements/wtBar.lua",
+  "elements/wtBarHealth.lua",
+  --"elements/wtCanvas.lua",  
+  "elements/wtBarWithBorder.lua",
+  "elements/wtHealthCap.lua",  
+  "elements/wtImage.lua",
+  "elements/wtImageSet.lua",
+  "elements/wtMediaSet.lua",
+  "elements/wtBuffPanel.lua",
+  "elements/wtProgressWheel.lua",
+  "templates/StandardFrame.lua",
+  "templates/StandardFrameUpsideDown.lua",
+  "templates/RaidFrame.lua",
+  "templates/SimpleFrame.lua",
+  "templates/HealthOrb.lua",
+  "templates/ManaOrb.lua",
+  "templates/OctanusRaidFrame.lua",
+  "templates/HealFrame.lua",
+  "templates/jnhOrbs.lua",
+  "templates/jnhOrbsReversed.lua",
+  "templates/LifeRaidFrame1.lua",
+  "templates/LifeRaidFrame2.lua",
+  "templates/LifeRaidFrameCallingColor.lua",
+  "templates/LifeUnitFrame1.lua",
+  "templates/LifeUnitFrame2.lua",
+  "templates/LifeTargetOfTarget.lua",
+  "templates/LifeGroupFrame.lua",
+  "templates/LifeGroupFrame2.lua",
+  "templates/LifeMageFrame.lua",  
+  "templates/LifeOrbs.lua", 
+  "templates/HPframe.lua",
+  "templates/Manaframe.lua", 
+}
+
+SavedVariables = 
+{
+}
+
+Embed = 
+{
+}
+
+Dependencies = 
+{
+	wtLibUnitDatabase = {"required", "before"},	
+	wtLibGadget = {"required", "before"},	
+}
+-- X-Curse-Packaged-Version: r20120505105758
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline
+-- X-Curse-Packaged-Version: v0.5.51
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline
+-- X-Curse-Packaged-Version: v0.5.7
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline
+-- X-Curse-Packaged-Version: v0.6.0
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline
+-- X-Curse-Packaged-Version: v0.6.3
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline
+-- X-Curse-Packaged-Version: v0.7.2
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline
+-- X-Curse-Packaged-Version: v0.9.4-beta
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline
+-- X-Curse-Packaged-Version: v0.10.17
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline

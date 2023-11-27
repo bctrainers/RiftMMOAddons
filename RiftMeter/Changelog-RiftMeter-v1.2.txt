@@ -1,0 +1,12 @@
+tag v1.2
+5d0751b9ac45ab0b4af1050ce67a18791cf1d9be
+Vince <BlackOut@Brutwacht>
+2015-10-27 13:42:58 +0100
+
+v1.2
+
+
+--------------------
+
+Vince:
+	- add abbreviation for numbers and primalist color options

@@ -1,0 +1,32 @@
+Identifier = "LibDraggable"
+
+Version = "0.6-151128-15:56:00"
+
+Email = "riftaddons@seebs.net"
+
+Dependencies = {
+	printf = { "required", "before" },
+}
+Embed = { printf = true }
+
+Name = {
+  English = "LibDraggable",
+  French = "LibDraggable",
+  German = "LibDraggable",
+}
+NameShort = "LibDraggable"
+
+Description = {
+  English = "A library for making windows draggable"
+}
+
+RunOnStartup = {
+  "LibDraggable.lua"
+}
+
+Environment = { "2.3" }
+
+-- X-Curse-Packaged-Version: v0.10.17
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline

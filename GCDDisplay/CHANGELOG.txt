@@ -1,0 +1,35 @@
+2.02r3: /aileen
+- Added spark color change command /gcd color R G B
+
+2.02r2: /aileen
+- Reduced CPU usage
+- Smarter way to detect if ability used is non-GCD
+- Fixed an issue GCD spark staying on screen even when GCD ended.
+
+2.02r1:
+- Converted to 2.2 Event system
+- Completely redid the ability detection mechanism
+
+2.01r8:
+- Moved ability detection to coroutine, and removed bulk check. Should hopefully stop excess CPU termination.
+- Reduced CPU usage
+
+2.01r7:
+- Added numeric display of GCD timer. /gcd number to toggle
+- Should use considerably less CPU when in form that has no detectable CDs (mechs in SBP)
+  If CD ability detection fails, throttle checks to 1 every 10 seconds.
+		
+2.01r6 - The programmatic detection of CD abilities can still pick the wrong ones.
+		Swap to a defined set of abilities (the 0 pt ones in each soul)
+		
+2.01r5 - Tweaked the GCD tracker choice a bit, and added:
+/gcd info - to show current settings
+/gcd cdreset - to reset current GCD track ability
+
+2.01r4 - Try #2, changed the detection method slightly.
+
+2.01r3 - Should now work with Rogues!
+
+2.01r2 - Added /gcd lock - to toggle it being movable
+
+2.01r1 - Initial Release

@@ -1,0 +1,46 @@
+Identifier = "Gadgets_Buffs"
+
+Name = "Gadgets: Buffs"
+Description = "Gadgets for Buffs and Debuffs"
+
+Author = "Wildtide"
+Website = "http://www.wildtide.net"
+Email = "wildtide@wildtide.net"
+
+Version = "1.0.0"
+
+Environment = "1.9"
+
+RunOnStartup = 
+{
+  "wtColourPicker.lua",
+  
+  "wtVersionCheck.lua",
+  
+  "wtBuffFilterConfig.lua",
+  "wtBuffFilter.lua",
+  "wtBuffTooltip.lua"
+  ,
+  "wtBuffBars_Renderer.lua",
+  "wtBuffBars.lua",
+  
+  "wtBuffIcons_Renderer.lua",
+  "wtBuffIcons.lua",
+}
+
+SavedVariables = 
+{
+}
+
+Embed = 
+{
+}
+
+Dependencies = 
+{
+	Gadgets = {"required", "before"},
+}
+-- X-Curse-Packaged-Version: v0.5.1
+-- X-Curse-Project-Name: Gadgets: Buffs
+-- X-Curse-Project-ID: gadgets-buffs
+-- X-Curse-Repository-ID: rift/gadgets-buffs/mainline

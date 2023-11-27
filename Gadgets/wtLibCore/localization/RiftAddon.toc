@@ -1,0 +1,46 @@
+Identifier = "GadgetsLocalization"
+
+Name = "GadgetsLocalization"
+Description = "Localization for Gadgets"
+
+Author = "Wildtide"
+Website = "http://www.wildtide.net"
+Email = "wildtide@wildtide.net"
+
+Version = "0.3.64"
+
+Environment = "1.9"
+
+RunOnStartup = 
+{
+  "Localization_en.lua",
+  "Localization_de.lua",
+  "Localization_fr.lua",
+  "Localization_ko.lua",
+  "Localization_ru.lua",
+}
+
+SavedVariables = 
+{
+}
+
+Embed = 
+{
+}
+
+Dependencies = 
+{
+	wtLibTranslate = {"required", "before"},
+}
+-- X-Curse-Packaged-Version: v0.9.4-beta
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline
+-- X-Curse-Packaged-Version: v0.10.3-beta
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline
+-- X-Curse-Packaged-Version: v0.10.17
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline

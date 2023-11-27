@@ -1,0 +1,17 @@
+Identifier  = "Gadgets_Speedometer"
+Name        = "Gadgets: Speedometer"
+Description = "Shows your speed."
+Author      = "Finney@Deepwood"
+Version     = "0.1"
+Email       = "finney.tool@gmail.com"
+Environment = "2.0"
+
+RunOnStartup    = { 
+    "Speedometer.lua", 
+}
+
+SavedVariables = {
+	 spd_saved_vars  = 'character',
+ }
+ 
+Dependencies    = { Gadgets = {"required", "before"}, }

@@ -1,0 +1,31 @@
+Identifier = "ObjInfo"
+
+Name = {
+  English = "ObjInfo",
+  French = "ObjInfo",
+  German = "ObjInfo",
+}
+
+NameShort = "Test"
+
+Description = {
+  English = "ObjInfo",
+  French = "ObjInfo",
+  German = "ObjInfo",
+}
+
+Author = "OKeez"
+Website = "http://okeez.com"
+
+-- You may want to include a version string for your addon as well.
+Version = "1.0.0"
+
+Email = "bob@okeez.com"
+
+Environment = "1.5"
+
+RunOnStartup = {
+  "json.lua",
+  "main.lua",
+}
+

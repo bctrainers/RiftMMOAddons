@@ -1,0 +1,10 @@
+wwDigital.ttf was obtained from www.dafont.com (http://www.dafont.com/ww-digital.font)
+and is used in the Gadgets: Speedometer Rift add-on by permission from its author 
+Michelle Laura. Please see the website www.dafont.com for more information about 
+using this font elsewhere.
+
+LiQuid.ttf, LiQuidBold.ttf, and LiquidExBold.ttf are all derived directly from the 
+"Liquid Crystal" font from http://www.dafont.com/liquid-crystal.font(modified only 
+to add a "%" character). These are noted as "Free for personal and commercial use."
+
+

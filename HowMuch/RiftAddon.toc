@@ -1,0 +1,26 @@
+Identifier = "HowMuch"
+Name = "HowMuch"
+NameShort = "hm"
+Description = "Item price addon"
+Author = "Xenyr@zaviel"
+Website = "http://www.riftui.com"
+Version = "1.7"
+Email = "xenyre@nospam.com"
+Environment = { "3.7", "4.0" }
+RunOnStartup = {
+  "tooltip.lua",
+  "AsyncHandler.lua",
+  "HowMuch.lua"
+}
+
+SavedVariables = {
+  HowMuch_SavedVariables = "shard"
+}
+
+Embed = {
+	LibSimpleWidgets = true
+}
+
+Dependencies = {
+  LibSimpleWidgets = {"required", "before"}
+}

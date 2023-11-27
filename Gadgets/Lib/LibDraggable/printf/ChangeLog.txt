@@ -1,0 +1,11 @@
+2013/12/06:
+	* Missing 'h' in printfhs()
+
+2013/02/03:
+	* Add "html_safe" escape hack.
+
+2012/10/31:
+	* New library
+	* Add HTML filtering
+	* Add console selection
+

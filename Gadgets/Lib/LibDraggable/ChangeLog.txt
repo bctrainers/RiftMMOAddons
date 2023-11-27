@@ -1,0 +1,28 @@
+2015/11/28:
+	* Support the non-RiftWindow usage case, to unbreak compatibility with
+	  Gadgets.
+
+2012/07/12:
+	* Fix leftover code for new event system.
+
+2012/06/27:
+	* TOC update
+	* New event system
+
+2012/11/03:
+	* TOC update
+	* Use printf library
+
+2012/06/22:
+	* Update TOC
+
+2012/01/08:
+	* Add Leftupoutside event so we stop leaving stuff in
+	  dragging state by accident.
+	* ClearAll() and set points against UIParent for dragging,
+	  breaking existing setpoint relationships (which we really
+	  do want to do, I think).
+
+2012/01/06:
+	* New toy!
+

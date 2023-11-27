@@ -1,0 +1,102 @@
+--[[
+                                G A D G E T S
+      -----------------------------------------------------------------
+                            wildtide@wildtide.net
+                           DoomSprout: Rift Forums 
+      -----------------------------------------------------------------
+      Gadgets Framework   : v0.10.3
+      Project Date (UTC)  : 2013-10-06T09:26:25Z
+      File Modified (UTC) : 2013-09-22T10:03:11Z (lifeismystery)
+      -----------------------------------------------------------------     
+--]]
+
+Identifier = "Gadgets"
+
+Name = "Gadgets"
+Description = "Unit Frames and Other Stuff for RIFT"
+
+Author = "Wildtide, Lifeismystery"
+Website = "http://www.curse.com/addons/rift/gadgets"
+Email = "wildtide@wildtide.net","lifeismystery@yandex.ru"
+
+Version = "v0.10.3"
+
+Environment = "3.1"
+
+RunOnStartup = 
+{
+  "wtInitMedia.lua",
+  "LifeSharedMedia.lua",
+  "wtFPSGadget.lua",
+  "wtRangeFinderGadget.lua",
+  "wtCPUGadget.lua",
+  "wtReloadGadget.lua",
+  "wtUnitFrameGadget.lua",
+  "wtChargeMeterGadget.lua",
+  "wtComboPointsGadget.lua",
+  "wtPlanarChargeGadget.lua",
+  "wtSoulVitalityGadget.lua",
+  "wtCastbarGadget.lua",
+  "wtCastbarPresets.lua",    
+  "wtLiveDPS.lua",
+  "wtLiveHPS.lua",
+  "wtEncounterDPS.lua",
+  "wtXPPercentGadget.lua",
+  "wtXPBarGadget.lua",
+  "wtFactionPanelGadget.lua",
+  "wtHudArcGadget.lua", 
+  "wtDataTextBar.lua",
+  "wtStatTextBar.lua",  
+  "wtCurrenciesTextBar.lua",
+ --"wtBuffWatch.lua",
+  "wtLifeComboPoints.lua",
+  "wtColourPicker.lua",
+  "wtBuffFilterConfig.lua",
+  "wtBuffFilter.lua",
+  "wtBuffTooltip.lua",
+  "wtBuffBars_Renderer.lua",
+  "wtBuffBars.lua", 
+  "wtBuffIcons_Renderer.lua",
+  "wtBuffIcons.lua",
+  "wtUnitFramePresets.lua", 
+  "wtRangeTraker.lua"
+}
+
+SavedVariables = 
+{
+}
+
+Embed = 
+{
+	wtLibCore = true,
+	wtLibMedia = true,
+	wtLibUnitDatabase = true,
+	wtLibGadget = true,
+	wtLibUnitFrame = true,
+	["Lib/LibSimpleWidgetsLifeEdition"] = true,
+	["Lib/LibSimpleWidgets"] = true,
+	["Lib/LibUnitChange"] = true,
+	["Lib/LibDraggable"] = true,
+}
+
+Dependencies = 
+{
+	wtLibCore = {"required", "before"},
+	wtLibUnitFrame = {"required", "before"},
+}
+-- X-Curse-Packaged-Version: v0.8.2
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline
+-- X-Curse-Packaged-Version: v0.9.4-beta
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline
+-- X-Curse-Packaged-Version: v0.10.3-beta
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline
+-- X-Curse-Packaged-Version: v0.10.17
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline

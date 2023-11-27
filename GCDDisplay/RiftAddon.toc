@@ -1,0 +1,19 @@
+Identifier = "GCDDisplay"
+
+Name = "GCDDisplay"
+Description = "Shows the Global Cooldown"
+
+Author = "Adelea@EU-Icewatch"
+Website = "http://www.riftgame.com"
+Email = "adelea@exyles.com"
+Version = "2.02r3"
+Environment = "4.2"
+
+RunOnStartup = 
+{
+  "GCDDisplay.lua",
+}
+
+SavedVariables = {
+	GCD_Settings = 'character'
+}

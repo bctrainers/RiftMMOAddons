@@ -1,0 +1,68 @@
+Version 1.3.1
+- Fixed bug with copy & paste Module: pasting multiple items already in
+  in dimension
+
+Version 1.3.0
+- Added the New Tool called Alfiebet, write words in dimensions.
+- Added Alfiebet to the help function.
+- Fixed error when leaving dimension while still on Tribal Magic.
+- Made some changes in Zone Check to be more accurate.
+- Added command (/Dt help), So you can open the help window outside of your
+  dimensions.
+
+Version 1.2.2.r22
+- Made small change in the Zone Check
+
+Version 1.2.2.r18
+- Added Offset Calculator module.
+- Added Offset Calculator to help.
+- Added Dimension detection, so that DT can only be opened inside dimensions
+
+Version 1.2.1.r17
+- adjusted help to match new options in copy & paste
+
+Version 1.2.0.r16
+- Rewrote Central point calculations.
+- Made some small changes in Tribal Magic, to improve performance
+
+Version 1.2.0.r15
+- Changed: The options Bags, Bank, Both under Copy/Paste to Bags, Bank Bags,
+  Vaults. This to give a more precise choice of where to take the items from.
+- Added a counter to the main menu for selected items, you can now see how
+  many items you have selected.
+
+Version 1.2.0
+- Implemented the magic carpet addon into Dimension Tools under the name
+  Tribal Magic.
+
+Version 1.1.5.r12
+- Made changes to handle the items in dimensions better.
+- Changed the way old Toolbox Sets are handled, it is no longer needed to
+  copy the Toolbox saved variable to the Dimension Tools directory. You
+  can now copy the file in the same directory and rename the new file to
+  tbx_Import.lua
+- Updated the help
+
+Version 1.1.5.r11
+- Minor changes in code to improve performance a bit.
+
+Version 1.1.5.r4
+- Made some cosmetic changes in the copy / paste window
+- Fixed error with load Default sets
+- Added Dimension Toolbox Sets support for load sets and export sets
+- Updated the Help
+- Added Automatic Selection of loaded sets and pasted items
+
+Version 1.1.4
+- Fixed error on pasting items without first copying an items, now gives
+  msg that you have to first copy an item.
+- Added possibility to load multiple copies of saved sets at once with an
+  offset.
+
+Version 1.1.3
+- Adjusted the Save/Load Sets option to work without errors for new
+  installations of the addon.
+- Adjusted the Import/Export Sets option to work without errors for new
+  installations of the addon.
+- Added the possibility under Save/Load Sets to choose if you want to
+  load the set using new items or items selected in your dimension.

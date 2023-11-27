@@ -1,0 +1,18 @@
+drop table if exists mob;
+create table mob (id varchar(17), lang varchar(10), name varchar(50), zone varchar(30), scene varchar(30));
+create index mob_i1 on mob (id, lang);
+
+drop table if exists achv;
+create table achv (id varchar(17), lang varchar(10), no integer, name varchar(50), mobid varchar(17));
+create index achv_i1 on achv (id, lang);
+
+drop table if exists mamatch;
+create table mamatch (achvid varchar(17), achvno integer, mobid varchar(17), auto char(1));
+
+drop table if exists helptext;
+create table helptext (id varchar(17), lang varchar(10), text varchar(1024));
+create index helptext_i1 on helptext (id, lang);
+
+drop table if exists loc;
+create table loc(mobid varchar(17), x integer, z integer);
+create index loc_i1 on loc (mobid);

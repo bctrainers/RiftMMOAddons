@@ -1,0 +1,40 @@
+Identifier = "wtLibUnitDatabase"
+
+Name = "wtLibUnitDatabase"
+Description = "WT Unit Database Library"
+
+Author = "Wildtide"
+Website = "http://www.wildtide.net"
+Email = "wildtide@wildtide.net"
+
+Version = "v0.9.4-beta"
+
+Environment = "1.10"
+
+RunOnStartup = 
+{
+  "wtUnit.lua",
+  "wtUnitDatabase.lua",
+}
+
+SavedVariables = 
+{
+}
+
+Embed = 
+{
+}
+
+Dependencies = 
+{
+	LibUnitChange = {"required", "before"},
+	wtLibCore = {"required", "before"},	
+}
+-- X-Curse-Packaged-Version: v0.9.4-beta
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline
+-- X-Curse-Packaged-Version: v0.10.17
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline

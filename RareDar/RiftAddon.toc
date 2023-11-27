@@ -1,0 +1,51 @@
+Identifier = "RareDar"
+
+Name = {
+  English = "RareDar"
+}
+
+Description = {
+  Germal  = "Ein Addon um die vielen seltenen Gegner in Telara zu suchen.",
+  English = "An addon designed for hunting down the many rares in Telara.",
+  Russian = "Дополнение для охотников на редких животных Тэлары."
+}
+
+-- Original author:
+-- Author = "stphung"
+-- Website = "stevenphung.org"
+-- Email = "stphung@gmail.com"
+
+-- Previous maintainer of RareDar
+-- Email = "blohm@s.netic.de"
+
+-- Current maintainer of RareDar
+Email = "eli64t@gmail.com"
+
+Version = "0.92"
+
+Environment = "4.3"
+
+SavedVariables = {
+   RareDarConfig = "account",
+   RareDarGlobal = "global",
+}
+
+Embed = {
+	LibVersionCheck = true,
+}
+Dependencies = {
+	LibVersionCheck = {"required", "before"},
+};
+
+RunOnStartup = {
+  "config.lua",
+--  "data.lua",
+  "raredardata.lua",
+  "dataconvert.lua",
+  "util.lua",
+  "notification.lua",
+  "notification_handler.lua",
+  "event.lua",
+  "radarbutton.lua",
+  "ConfigUI.lua",
+}

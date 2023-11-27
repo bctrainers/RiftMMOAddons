@@ -1,0 +1,15 @@
+Identifier = "RatHunter"
+Name = "Rat Hunter"
+Description = "Simple tool for tracking where them rats are, and to track your progress on munch maze. Thanks to Lynx3d on forums for the map picture."
+Author = "Alleja@zaviel"
+Version     = "1.1.2"
+Email = "mznznlt@gmail.com"
+Environment = "4.0"
+
+SavedVariables = {
+	RHSettings = "character",
+}
+
+RunOnStartup = {
+	"Rat_main.lua",
+}

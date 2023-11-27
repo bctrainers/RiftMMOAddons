@@ -1,0 +1,57 @@
+Identifier = "wtLibCore"
+
+Name = "wtLibCore"
+Description = "WT Core Library"
+
+Author = "Wildtide"
+Website = "http://www.wildtide.net"
+Email = "wildtide@wildtide.net"
+
+Version = "v0.9.4-beta"
+
+Environment = "1.10"
+
+RunOnStartup = 
+{
+  "wtTranslate.lua", 
+  
+  "localization/Localization_en.lua",
+  "localization/Localization_de.lua",
+  "localization/Localization_fr.lua",
+  "localization/Localization_ko.lua",
+  "localization/Localization_ru.lua",
+  
+  "wtInit.lua",
+  "wtLog.lua",
+  "wtCore.lua",
+  "wtVersionCheck.lua",
+  "wtUtility.lua",
+  "wtColorRef.lua",
+}
+
+SavedVariables = 
+{
+	wtxOptions = "account",
+	wtxLogLevel = "account",	
+}
+
+Embed = 
+{
+}
+
+Dependencies = 
+{
+	wtLibMedia = {"required", "before"},
+}
+-- X-Curse-Packaged-Version: v0.9.4-beta
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline
+-- X-Curse-Packaged-Version: v0.10.3-beta
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline
+-- X-Curse-Packaged-Version: v0.10.17
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline

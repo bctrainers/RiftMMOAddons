@@ -1,0 +1,55 @@
+Identifier = "RiftMeter"
+Name = "Rift Meter"
+NameShort = "RM"
+Description = "Rift Meter is a combat tracker inspired by Recount and Skada Damage Meter."
+
+Author = "Vince@BlackOut@Brutwacht"
+Website = "http://www.curse.com/addons/rift/rift-meter"
+Email = "chuckySTAR@gmail.com"
+Version = "1.2"
+Environment = "3.4"
+
+RunOnStartup = {
+	"locales/German.lua",
+	"locales/English.lua",
+	"RiftMeter_Utilities.lua",
+	"RiftMeter_UI.lua",
+	"RiftMeter_Config.lua",
+	"RiftMeter.lua"
+}
+
+SavedVariables = {
+	RiftMeter_windows = "character",
+	RiftMeter_lock = "character",
+	RiftMeter_alwaysShowPlayer = "character",
+	RiftMeter_showScrollbar = "character",
+	RiftMeter_showRankNumber = "character",
+	RiftMeter_showPercent = "character",
+	RiftMeter_showAbsolute = "character",
+	RiftMeter_abbreviateNumbers = "character",
+	RiftMeter_mergeAbilitiesByName = "character",
+	RiftMeter_showTooltips = "character",
+	RiftMeter_classColors = "character",
+	RiftMeter_abilityColors = "character",
+	RiftMeter_totalbarColor = "character",
+	RiftMeter_absorbAsDamage = "character",
+	RiftMeter_mergePets = "character",
+	RiftMeter_customHighlightFontColor = "character",
+	RiftMeter_customHighlightFontColorValue = "character",
+	RiftMeter_customHighlightBackgroundColor = "character",
+	RiftMeter_customHighlightBackgroundColorValue = "character",
+}
+
+Embed = {
+	["libs/VinceUtils"] = true,
+	["libs/ColorPicker"] = true
+}
+
+Dependencies = {
+	VinceUtils = {"required", "before"},
+	ColorPicker = {"required"}
+}
+-- X-Curse-Packaged-Version: v1.2
+-- X-Curse-Project-Name: Rift Meter
+-- X-Curse-Project-ID: rift-meter
+-- X-Curse-Repository-ID: rift/rift-meter/mainline

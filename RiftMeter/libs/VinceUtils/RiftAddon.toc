@@ -1,0 +1,33 @@
+Identifier = "VinceUtils"
+
+Name = "Vince Utils"
+
+Description = "Several helper functions used in my projects"
+
+Author = "Vince@BlackOut@Brutwacht"
+Website = ""
+Email = "chuckySTAR@gmail.com"
+Version = "0.3.5"
+Environment = "2.4"
+
+RunOnStartup = {
+  "class.lua",
+  "table.lua",
+  "timer.lua",
+  "linkedlist.lua",
+  "events.lua",
+  "raid.lua",
+  "main.lua",
+}
+
+Embed = {
+	["libs/LibUnitChange"] = true,
+}
+
+Dependencies = {
+	LibUnitChange = {"required", "before"},
+}
+-- X-Curse-Packaged-Version: v1.2
+-- X-Curse-Project-Name: Rift Meter
+-- X-Curse-Project-ID: rift-meter
+-- X-Curse-Repository-ID: rift/rift-meter/mainline

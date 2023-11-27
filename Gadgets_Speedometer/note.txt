@@ -1,0 +1,29 @@
+
+I only learned a couple of days ago that there is already another Speedometer
+addon available for Rift (SinRopa's Speed-o-Meter)! Had I realized, I probably
+wouldn't have spent the time here (not enough addon authors right now to go
+duplicating effort after all!), but I did want to try to write my own Gadget
+and this seemed an easy one to start with. Since it was so far along I decided
+to finish it.
+
+This Gadget is intended to be used with the included wwDigital font. The
+capability is provided to change fonts in case wwDigital is completely
+unsuitable to your UI, but if you use another font, spacing will probably be
+suboptimal and you'll want to turn off the RPS and MPH options.
+
+A big shout-out to Adelea for the font-selection code. And of course to
+Wildtide for the Gadgets framework.
+
+A note about speeds & distances in Rift:
+
+It seems the "original" running speed in Rift was set to 5 rift units per
+second (a "rift unit" is the length that map coordinates are based upon and is
+very close to a meter--1.03 rift units in a meter, a figure derived from upon
+looking at spell ranges).  After the run speed increase in December 2012, the
+standard speed was boosted to about 6.1 rps. So when your character's running,
+you'll see an average speed of around 6.1, or 122% of original speed. It seems
+to vary a bit between characters.
+
+I decided not to recalibrate the new speed to 100% in the addon because to do
+so would throw off all calculations for mount speeds and other speed boosts.
+Your 150% mount would look like it was going about 130%, etc.

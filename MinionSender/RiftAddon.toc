@@ -1,0 +1,49 @@
+Identifier = "MinionSender"
+Name = "Minion Sender"
+NameShort = "Minion Sender"
+Description = "Version 2, Rift 4.5 "
+
+Author = "Calister@Deepwood"
+Website = "https://discord.gg/bYtdKU9"
+Email = "calister.rift@gmail.com"
+
+Version = "2.0.1"
+Environment = "4.5"
+
+RunOnStartup = {
+	"lua\\global.lua",
+	"lua\\utils.lua",
+
+	"lua\\gui\\basic.lua",
+	"lua\\gui\\extended.lua",
+
+	"lua\\data\\language\\english.lua",
+	"lua\\data\\language\\french.lua",
+	"lua\\data\\language\\german.lua",
+	"lua\\data\\language\\russian.lua",
+
+	"lua\\data\\common.lua",
+	"lua\\data\\minion.lua",
+	"lua\\data\\chain.lua",
+	"lua\\data\\adventure.lua",
+	"lua\\data\\inventory.lua",
+
+	"lua\\menu\\options.lua",
+	"lua\\menu\\options.simple.lua",
+	"lua\\menu\\options.advanced.lua",
+	"lua\\menu\\stats.lua",
+
+	"lua\\minion.lua",
+	"lua\\inventory.lua",
+	"lua\\main.lua",
+	"lua\\events.lua"
+}
+
+Dependencies = {
+	Docker = {"optional", "before"},
+}
+
+SavedVariables = {
+	MinionSenderUISettings = "character",
+	MinionSenderConfig = "account"
+}

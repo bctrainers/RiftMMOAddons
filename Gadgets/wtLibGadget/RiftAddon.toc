@@ -1,0 +1,89 @@
+Identifier = "wtLibGadget"
+
+Name = "wtLibGadget"
+Description = "WT Gadget Library"
+
+Author = "Wildtide"
+Website = "http://www.wildtide.net"
+Email = "wildtide@wildtide.net"
+
+Version = "v0.5.4"
+
+Environment = "1.10"
+
+RunOnStartup = 
+{
+  "controls/wtControl.lua",
+  "controls/wtMenu.lua",
+  "controls/wtComboBox.lua",
+  "controls/wtSelect.lua",
+  "controls/wtTexSelect.lua",
+  "controls/wtImgSelect.lua",
+  "controls/wtMacroSet.lua",
+  "controls/wtColorPicker.lua",
+  "controls/wtDialog.lua",
+  "controls/wtTexMenu.lua",
+  "controls/wtSlider.lua",
+
+  "wtGadget.lua",
+  "Preview.lua",
+  "wtGadgetMessage.lua",
+  "wtGadgetButton.lua",
+  "wtGadgetRecommendReload.lua",
+  "wtGadgetSlashCmd.lua",
+
+  "themes/classic/classic.theme.lua",
+  "themes/subtle/subtle.theme.lua",
+  "themes/subtle_preview/subtle_preview.theme.lua",
+
+  "dialogs/wtGadgetSettings.lua",
+  "dialogs/wtGadgetImport.lua",
+  "dialogs/wtGadget_CreateDialog.lua",
+--  "dialogs/wtGadget_ModifyDialog.lua",
+  
+--  "properties/wtProperty.lua",
+--  "properties/wtPropertyTypeHandlers.lua",
+--  "properties/wtPropertyPanel.lua",
+  
+}
+
+SavedVariables = 
+{
+	wtxGadgets="character",
+	wtxLayouts="account",
+}
+
+Embed = 
+{
+}
+
+Dependencies = 
+{
+	LibSimpleWidgetsLifeEdition = {"required", "before"},
+	wtLibCore = {"required", "before"},	
+	wtLibUnitDatabase = {"required", "before"},	
+}
+-- X-Curse-Packaged-Version: v0.5.4
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline
+-- X-Curse-Packaged-Version: v0.8.0
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline
+-- X-Curse-Packaged-Version: v0.9.4-beta
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline
+-- X-Curse-Packaged-Version: v0.10.2
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline
+-- X-Curse-Packaged-Version: v0.10.3-beta
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline
+-- X-Curse-Packaged-Version: v0.10.17
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline

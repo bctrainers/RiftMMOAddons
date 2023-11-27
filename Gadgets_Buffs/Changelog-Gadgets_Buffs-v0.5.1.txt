@@ -1,0 +1,11 @@
+tag v0.5.1
+a5e9726caea08847c0ca66bd9418d9bb35161002
+Natali <Lifeismystery@yandex.ru>
+2014-01-27 16:32:07 +0400
+
+
+
+--------------------
+
+Natali:
+	- * Add options to on/off text outline * Add options to on/off border

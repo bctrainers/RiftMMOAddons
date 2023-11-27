@@ -1,0 +1,38 @@
+
+-- See TrionDevelopmentTools for better documentation.
+
+Identifier = "fragRecycle"
+
+Name = "fragRecycle"
+
+Description = "fragment tools from Aaeol"
+
+Email = "fragRecycle@eqrogues.com"
+
+Version = "1.3"
+
+Environment = "4.0"
+
+RunOnStartup = {
+  "main.lua"
+}
+
+SavedVariables = {
+	fragRecycleFrameX = 'character',
+	fragRecycleFrameY = 'character',
+	btnRecycleFrameX = 'character',
+	btnRecycleFrameY = 'character',
+	fragmentAffinity = 'character',
+	fragmentTier = 'character',
+	fragmentRarity = 'character',
+	infusionLevel = 'character',
+	primeStats = 'character',
+	secondStats = 'character',
+	useinv = 'character',
+	usebags = 'character',
+	pri_andorMode = 'character',
+	sec_andorMode = 'character',
+	btniconsize = 'character',
+	btniconlock = 'character',
+	btniconbackground = 'character',
+}

@@ -1,0 +1,46 @@
+Identifier = "LibSimpleWidgetsLifeEdition"
+
+Name = {
+  English = "Simple Widgets Library Life Edition",
+}
+
+NameShort = "LSWLD"
+
+Description = {
+  English = "Library of simple GUI widgets for use by other addons.",
+}
+
+Author = "Gordon Tyler"
+Website = "http://www.riftui.com/downloads/info108-LibSimpleWidgetsLifeEdition.html"
+Version = "1.0.1"
+Email = "lifeismystery@yandex.ru"
+Environment = "3.0"
+
+RunOnStartup = {
+  "main.lua",
+  "eventproxy.lua",
+  "border.lua",
+  "scrollview.lua",
+  "window.lua",
+  "select.lua",
+  "list.lua",
+  "textarea.lua",
+  "checkbox.lua",
+  "slider.lua",
+  "tabview.lua",
+  "tooltip.lua",
+  "radiobutton.lua",
+  "radiobuttongroup.lua",
+  "scrolllist.lua",
+  "grid.lua",
+  "uicreateframe.lua",
+  "layout.lua",
+}
+-- X-Curse-Packaged-Version: v0.10.3-beta
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline
+-- X-Curse-Packaged-Version: v0.10.17
+-- X-Curse-Project-Name: Gadgets
+-- X-Curse-Project-ID: gadgets
+-- X-Curse-Repository-ID: rift/gadgets/mainline

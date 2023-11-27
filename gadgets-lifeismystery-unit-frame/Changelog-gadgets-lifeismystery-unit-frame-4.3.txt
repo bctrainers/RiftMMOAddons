@@ -1,0 +1,11 @@
+tag 4.3
+72420a94d7d6ed18c4d55bf0bd57cf2fa706c8c5
+lifeismystery <lifeismystery@yandex.ru>
+2015-12-26 16:26:22 +0300
+
+
+
+--------------------
+
+lifeismystery:
+	- * Added  Black/White List to Raid frames for next template: LifeismysteryRaidFrame, LifeismysteryRaidFrameDps, LifeismysteryRaidFrameMini, LifeismysteryTanksRaidFrame    * Added template HP_Text - show only hp%
