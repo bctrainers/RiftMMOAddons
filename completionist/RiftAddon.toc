@@ -1,0 +1,35 @@
+Identifier = "Completionist"
+Name = "Completionist"
+NameShort = "cmpl"
+Description = "Quest completion tracker"
+Author = "Xenyr@zaviel"
+Website = "http://www.riftui.com"
+Version = "2.9.8"
+Email = "xenyre@nospam.com"
+Environment = { "4.0" }
+RunOnStartup = {
+  "Locale.lua",
+  "Zones.lua",
+  "Givers.lua",
+  "ExtraQuests.lua",
+  "Quests.lua",
+  "KnownCoords.lua",
+  "DragFrame.lua",
+  "ChannelWizard.lua",
+  "Completionist.lua"
+}
+
+SavedVariables = {
+  Completionist_SavedVariables = "shard",
+  Completionist_SavedCharacterVariables = "character"
+}
+
+Embed = {
+	LibSimpleWidgets = true,
+	XenUtils = true
+}
+
+Dependencies = {
+  LibSimpleWidgets = {"required", "before"},
+  XenUtils = {"required", "before"}
+}
