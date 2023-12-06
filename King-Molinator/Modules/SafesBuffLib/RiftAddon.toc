@@ -1,0 +1,34 @@
+﻿Identifier = "SafesBuffLib"
+
+Name = "Safe's Buff Library"
+NameShort = "LibSBuff"
+
+Description = "Watchdog aware Buff Event queue and cache."
+
+Author = "Paul Snart"
+Website = "http://twitter.com/#!/psnart"
+Email = "snarty@gmail.com"
+
+Version = "0.1.5"
+
+Environment = "2.4"
+
+RunOnStartup = {
+	"LibSBuff.lua",
+}
+
+Embed = {
+	["SafesTableLib"] = true,
+}
+
+Dependencies = {
+	SafesTableLib = {"required", "before"},
+}
+-- X-Curse-Packaged-Version: r790
+-- X-Curse-Project-Name: King Boss Mods
+-- X-Curse-Project-ID: king-molinator
+-- X-Curse-Repository-ID: rift/king-molinator/mainline
+-- X-Curse-Packaged-Version: r801
+-- X-Curse-Project-Name: King Boss Mods
+-- X-Curse-Project-ID: king-molinator
+-- X-Curse-Repository-ID: rift/king-molinator/mainline

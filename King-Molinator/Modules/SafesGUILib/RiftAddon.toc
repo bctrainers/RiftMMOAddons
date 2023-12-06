@@ -1,0 +1,43 @@
+﻿Identifier = "SafesGUILib"
+
+Name = "Safe's GUI Library"
+NameShort = "LibSGui"
+
+Description = "Dynamic GUI management library."
+
+Author = "Paul Snart"
+Website = "http://twitter.com/#!/psnart"
+Email = "snarty@gmail.com"
+
+Version = "0.1.6"
+
+Environment = "3.0"
+
+RunOnStartup = {
+	"LibSGui.lua",
+	"Objects/Scrollbar.lua",
+	"Objects/Window.lua",
+	"Objects/Panel.lua",
+	"Objects/Group.lua",
+	"Objects/Tabber.lua",
+	"Objects/TreeView.lua",
+	"Objects/DropDown.lua",
+}
+
+Embed = {
+	["SafesTableLib"] = true,
+	["TextureHandler"] = true,
+}
+
+Dependencies = {
+	SafesTableLib = {"required", "before"},
+	KBMTextureHandler = {"required", "before"},
+}
+-- X-Curse-Packaged-Version: r790
+-- X-Curse-Project-Name: King Boss Mods
+-- X-Curse-Project-ID: king-molinator
+-- X-Curse-Repository-ID: rift/king-molinator/mainline
+-- X-Curse-Packaged-Version: r801
+-- X-Curse-Project-Name: King Boss Mods
+-- X-Curse-Project-ID: king-molinator
+-- X-Curse-Repository-ID: rift/king-molinator/mainline

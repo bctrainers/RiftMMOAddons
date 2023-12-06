@@ -1,0 +1,38 @@
+﻿Identifier = "SafesUnitLib"
+
+Name = "Safe's Unit Library"
+NameShort = "LibSUnit"
+
+Description = "Dynamic safe removal Table library."
+
+Author = "Paul Snart"
+Website = "http://twitter.com/#!/psnart"
+Email = "snarty@gmail.com"
+
+Version = "0.3.2"
+
+Environment = "2.3"
+
+RunOnStartup = {
+	"LibSUnit.lua",
+}
+
+Embed = {
+	LibUnitChange = true,
+}
+
+SavedVariables = {
+	SafesUnitLib_Settings = "account",
+}
+
+Dependencies = {
+	LibUnitChange = {"required", "before"},
+}
+-- X-Curse-Packaged-Version: r790
+-- X-Curse-Project-Name: King Boss Mods
+-- X-Curse-Project-ID: king-molinator
+-- X-Curse-Repository-ID: rift/king-molinator/mainline
+-- X-Curse-Packaged-Version: r801
+-- X-Curse-Project-Name: King Boss Mods
+-- X-Curse-Project-ID: king-molinator
+-- X-Curse-Repository-ID: rift/king-molinator/mainline

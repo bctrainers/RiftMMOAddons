@@ -1,0 +1,1584 @@
+﻿Identifier = "KingMolinator"
+
+Name = "King Boss Mods"
+
+NameShort = "KBM"
+
+Description = {
+    English = "Development of a fully fledged Raid and Dungeon encounter alert system.\n\nType /kbmhelp for details on in-game slash commands.",
+    French = "Développement d'un système d'alerte en Raid et Donjon.\n\nType /kbmhelp pour plus de détails sur les commandes en jeu.",
+    German = "Development of a fully fledged Raid and Dungeon encounter alert system.\n\nType /kbmhelp for details on in-game slash commands.",
+}
+
+Author = "Yarrellii@Greybriar"
+Website = "https://www.curseforge.com/rift/addons/king-boss-mods-2-0"
+Email = "kbm@nodster.co.uk"
+
+-- Originally authored by Safe@deepwood kingbossmods@gmail.com
+
+-- PoA Updated by Rathoz and kinou
+Version = "2.0.0.5"
+
+Environment = "4.1"
+
+RunOnStartup = {
+	"KingMolinator.lua",
+	"Modules/Triggers.lua",
+	"Modules/Alerts.lua",
+	"Modules/MechTimer.lua",
+	"Modules/MechSpy.lua",
+	"Modules/PhaseMonitor.lua",
+	"Modules/EncounterTimer.lua",
+	"Modules/TankSwap.lua",
+	"Modules/Menu/MainMenu.lua",
+	"Modules/Menu/Build.lua",
+	"Modules/Menu/Objects/Objects.lua",
+	"Modules/Menu/Objects/Check.lua",
+	"Modules/Menu/Objects/PlainHeader.lua",
+	"Modules/Menu/Objects/Header.lua",
+	"Modules/Menu/Objects/ColorPicker.lua",
+	"Modules/Menu/Objects/Group.lua",
+	"Modules/Menu/Objects/DropDown.lua",
+	"Modules/Menu/Page.lua",
+	"Modules/Menu/Instance.lua",
+	"Modules/ResMaster.lua",
+	"Modules/PlayerControl.lua",
+	"Modules/PercentageMon.lua",
+	"Modules/Castbar.lua",
+	"Modules/Reflect.lua",
+	
+  
+  -- PoA Raids
+		-- Bastion of steel
+			"Raids/Prophecy of Ahnket/Normal/Bastion_of_Steel/BOS_Header.lua",
+			"Raids/Prophecy of Ahnket/Normal/Bastion_of_Steel/Azranel.lua",
+			"Raids/Prophecy of Ahnket/Normal/Bastion_of_Steel/CommanderIsiel.lua",
+			"Raids/Prophecy of Ahnket/Normal/Bastion_of_Steel/TitanX.lua",
+		-- Normal Tartaric Depths
+			"Raids/Prophecy of Ahnket/Normal/Tartaric_Depths/TD_Header.lua",
+			"Raids/Prophecy of Ahnket/Normal/Tartaric_Depths/Beligosh.lua",
+			"Raids/Prophecy of Ahnket/Normal/Tartaric_Depths/TarJulia.lua",
+			"Raids/Prophecy of Ahnket/Normal/Tartaric_Depths/Council.lua",
+			"Raids/Prophecy of Ahnket/Normal/Tartaric_Depths/Malannon.lua",
+    -- Intrepid: Rise of the Phoenix
+			"Raids/Prophecy of Ahnket/Normal/Intrepid_Rise_of_the_Phoenix/ROTPHeader.lua",
+			"Raids/Prophecy of Ahnket/Normal/Intrepid_Rise_of_the_Phoenix/Ereandorn.lua",
+			"Raids/Prophecy of Ahnket/Normal/Intrepid_Rise_of_the_Phoenix/Beruhast.lua",
+			"Raids/Prophecy of Ahnket/Normal/Intrepid_Rise_of_the_Phoenix/Silgen.lua",
+			"Raids/Prophecy of Ahnket/Normal/Intrepid_Rise_of_the_Phoenix/Arakhurn.lua",
+			
+		-- LFR Tartaric Depths
+			"Raids/Prophecy of Ahnket/LFR/Tartaric_Depths/TD_Header.lua",
+			"Raids/Prophecy of Ahnket/LFR/Tartaric_Depths/Beligosh.lua",
+			"Raids/Prophecy of Ahnket/LFR/Tartaric_Depths/TarJulia.lua",
+			"Raids/Prophecy of Ahnket/LFR/Tartaric_Depths/Council.lua",
+			"Raids/Prophecy of Ahnket/LFR/Tartaric_Depths/Malannon.lua",
+      
+    -- Queen's Foci
+            "Raids/Prophecy of Ahnket/LFR/The_Queens_Foci/QFHeader.lua",
+			"Raids/Prophecy of Ahnket/LFR/The_Queens_Foci/Hexathel.lua",
+      
+   -- PoA Experts
+		-- Darkening Deeps
+			"Experts/Prophecy of Ahnket/Intrepid_Darkening_Deeps/DDHeader.lua",
+			"Experts/Prophecy of Ahnket/Intrepid_Darkening_Deeps/Braxtepel.lua",
+			"Experts/Prophecy of Ahnket/Intrepid_Darkening_Deeps/Bringhurst.lua",
+			"Experts/Prophecy of Ahnket/Intrepid_Darkening_Deeps/Tegenar.lua",
+			"Experts/Prophecy of Ahnket/Intrepid_Darkening_Deeps/Glubmuk.lua",
+			"Experts/Prophecy of Ahnket/Intrepid_Darkening_Deeps/Council.lua",
+			"Experts/Prophecy of Ahnket/Intrepid_Darkening_Deeps/Scarn.lua",
+      
+    -- Gyel Fortress
+			"Experts/Prophecy of Ahnket/Intrepid_Gyel_Fortress/GF_Header.lua",
+			"Experts/Prophecy of Ahnket/Intrepid_Gyel_Fortress/Seathe.lua",
+			"Experts/Prophecy of Ahnket/Intrepid_Gyel_Fortress/Kytus.lua",
+			"Experts/Prophecy of Ahnket/Intrepid_Gyel_Fortress/Nezavar.lua",
+			"Experts/Prophecy of Ahnket/Intrepid_Gyel_Fortress/Glasya.lua",
+			
+	-- Enclave of Ahnket
+			"Experts/Prophecy of Ahnket/Enclave_Of_Ahnket/EA_Header.lua",
+			"Experts/Prophecy of Ahnket/Enclave_Of_Ahnket/Salasohcarv.lua",
+			"Experts/Prophecy of Ahnket/Enclave_Of_Ahnket/Allajax.lua",
+			"Experts/Prophecy of Ahnket/Enclave_Of_Ahnket/Frezhak.lua",
+			"Experts/Prophecy of Ahnket/Enclave_Of_Ahnket/Alumar.lua",
+  
+	-- NT Raids/Rift 20
+		-- Mount Sharax
+			"Raids/Nightmare Tide/Mount_Sharax/MSHeader.lua",
+			"Raids/Nightmare Tide/Mount_Sharax/Bulf.lua",
+			"Raids/Nightmare Tide/Mount_Sharax/Jinoscoth.lua",
+			"Raids/Nightmare Tide/Mount_Sharax/Izkinra.lua",
+			"Raids/Nightmare Tide/Mount_Sharax/Yrlwalach.lua",
+			"Raids/Nightmare Tide/Mount_Sharax/Threngar.lua",
+		
+		-- Tyrant Forge
+			"Raids/Nightmare Tide/Tyrants Forge/TFHeader.lua",
+			"Raids/Nightmare Tide/Tyrants Forge/Johan.lua",
+			"Raids/Nightmare Tide/Tyrants Forge/Pumpkin.lua",
+			"Raids/Nightmare Tide/Tyrants Forge/Tyrant.lua",
+		
+		-- Hammerknell
+			"Raids/Nightmare Tide/Hammerknell/HKHeader.lua",
+			"Raids/Nightmare Tide/Hammerknell/Murdantix.lua",
+			"Raids/Nightmare Tide/Hammerknell/Matron.lua",
+			"Raids/Nightmare Tide/Hammerknell/Sicaron.lua",
+			"Raids/Nightmare Tide/Hammerknell/Zilas.lua",
+			"Raids/Nightmare Tide/Hammerknell/Prime.lua",
+			"Raids/Nightmare Tide/Hammerknell/Grugonim.lua",
+			"Raids/Nightmare Tide/Hammerknell/Molinar.lua",
+			"Raids/Nightmare Tide/Hammerknell/Estrode.lua",
+			"Raids/Nightmare Tide/Hammerknell/Garau.lua",
+			"Raids/Nightmare Tide/Hammerknell/Inwar.lua",
+			"Raids/Nightmare Tide/Hammerknell/Akylios.lua",
+			
+		-- Mind of Madness
+			"Raids/Nightmare Tide/Mind_of_Madness/MoMHeader.lua",
+			"Raids/Nightmare Tide/Mind_of_Madness/Pagura.lua",
+			
+		-- Comet of Ahnket
+			"Raids/Nightmare Tide/CometOfAhnket/CoAHeader.lua",
+			"Raids/Nightmare Tide/CometOfAhnket/Azaphrentus.lua",
+			"Raids/Nightmare Tide/CometOfAhnket/Eblius.lua",
+			"Raids/Nightmare Tide/CometOfAhnket/Fyragnos.lua",
+			"Raids/Nightmare Tide/CometOfAhnket/Hericius.lua",
+	
+	--Storm Legion Raids/Rift 20
+		--Binding of Blood
+			"Raids/Storm Legion/Binding Maelforge/BMHeader.lua",
+			"Raids/Storm Legion/Binding Maelforge/BMaelforge.lua",
+			"Raids/Storm Legion/Binding Maelforge/BMagcilian.lua",
+			"Raids/Storm Legion/Binding Akylios/BAHeader.lua",
+			"Raids/Storm Legion/Binding Akylios/BAkylios.lua",
+			"Raids/Storm Legion/Binding Akylios/BIrauga.lua",	
+			"Raids/Storm Legion/Binding Greenscale/BGHeader.lua",
+			"Raids/Storm Legion/Binding Greenscale/BGreenscale.lua",
+			"Raids/Storm Legion/Binding Greenscale/BToxilua.lua",
+			"Raids/Storm Legion/Binding Laethys/BLHeader.lua",
+			"Raids/Storm Legion/Binding Laethys/BLaethys.lua",
+			"Raids/Storm Legion/Binding Laethys/BMallaven.lua",	
+		
+		-- Planebreaker Bastion
+			"Raids/Storm Legion/Planebreaker Bastion/PBHeader.lua",
+			"Raids/Storm Legion/Planebreaker Bastion/Eggtenders.lua",
+			"Raids/Storm Legion/Planebreaker Bastion/Thrax.lua",
+			"Raids/Storm Legion/Planebreaker Bastion/Proteus.lua",
+			"Raids/Storm Legion/Planebreaker Bastion/InyrKta.lua",
+			"Raids/Storm Legion/Planebreaker Bastion/Abominus.lua",
+		
+		-- Infinity Gate
+			"Raids/Storm Legion/The Infinity Gate/IGHeader.lua",
+			"Raids/Storm Legion/The Infinity Gate/BreakerX1.lua",
+			"Raids/Storm Legion/The Infinity Gate/Twins.lua",
+			"Raids/Storm Legion/The Infinity Gate/Volan.lua",
+		
+		-- Endless Eclipse
+			"Raids/Storm Legion/Endless Eclipse/EEHeader.lua",
+			"Raids/Storm Legion/Endless Eclipse/Goloch.lua",
+			"Raids/Storm Legion/Endless Eclipse/Matriarch.lua",
+			"Raids/Storm Legion/Endless Eclipse/Progenitor.lua",
+			"Raids/Storm Legion/Endless Eclipse/Kain.lua",
+			"Raids/Storm Legion/Endless Eclipse/Regulos.lua",
+		
+		-- Frozen Tempest
+			"Raids/Storm Legion/Frozen Tempest/FTHeader.lua",
+			"Raids/Storm Legion/Frozen Tempest/Gelidra.lua",
+			"Raids/Storm Legion/Frozen Tempest/Gangnum.lua",
+			"Raids/Storm Legion/Frozen Tempest/Zaviel.lua",
+			"Raids/Storm Legion/Frozen Tempest/Kolmasveli.lua",
+			"Raids/Storm Legion/Frozen Tempest/Crucia.lua",
+  
+	-- NT Slivers/Rift
+		-- Rhen of Fate
+			"Slivers/Nightmare Tide/The_Rhen_of_Fate/ROFHeader.lua",
+			"Slivers/Nightmare Tide/The_Rhen_of_Fate/Ungolok.lua",
+			"Slivers/Nightmare Tide/The_Rhen_of_Fate/Hidrac.lua",
+			"Slivers/Nightmare Tide/The_Rhen_of_Fate/Drekanoth.lua",
+			"Slivers/Nightmare Tide/The_Rhen_of_Fate/Finric.lua",
+			
+		-- Intrepid Gilded Prophecy
+			"Slivers/Nightmare Tide/Intrepid_Gilded_Prophecy/GPHeader.lua",
+			"Slivers/Nightmare Tide/Intrepid_Gilded_Prophecy/Anrak.lua",
+			"Slivers/Nightmare Tide/Intrepid_Gilded_Prophecy/Guurloth.lua",
+			"Slivers/Nightmare Tide/Intrepid_Gilded_Prophecy/Thalguur.lua",
+			"Slivers/Nightmare Tide/Intrepid_Gilded_Prophecy/Uruluuk.lua",
+	
+	-- Storm Legion Slivers/Rift
+		-- Drowned Halls Intrepid
+			"Slivers/Storm Legion/Intrepid_Drowned_Halls/IDHHeader.lua",
+			"Slivers/Storm Legion/Intrepid_Drowned_Halls/Jorb.lua",
+			"Slivers/Storm Legion/Intrepid_Drowned_Halls/Joloral.lua",
+			"Slivers/Storm Legion/Intrepid_Drowned_Halls/Isskal.lua",
+			"Slivers/Storm Legion/Intrepid_Drowned_Halls/Hydriss.lua",
+			
+		-- Grim Awakening
+			"Slivers/Storm Legion/Grim_Awakening/GAHeader.lua",
+			"Slivers/Storm Legion/Grim_Awakening/Kyzan.lua",
+			"Slivers/Storm Legion/Grim_Awakening/MLKaliban.lua",
+			"Slivers/Storm Legion/Grim_Awakening/Salvarola.lua",
+			"Slivers/Storm Legion/Grim_Awakening/Ultane.lua",
+		
+		-- Triumph of Dragon Queen
+			"Slivers/Storm Legion/Triumph_of_the_Dragon_Queen/TDQHeader.lua",
+			"Slivers/Storm Legion/Triumph_of_the_Dragon_Queen/Zoles.lua",
+			"Slivers/Storm Legion/Triumph_of_the_Dragon_Queen/Cyril.lua",
+			"Slivers/Storm Legion/Triumph_of_the_Dragon_Queen/JultharinSL.lua",	
+			"Slivers/Storm Legion/Triumph_of_the_Dragon_Queen/Typhiria.lua",
+	
+	-- Nightmare Tide Experts
+		--Citadel of Insanity
+			"Experts/Nightmare Tide/Citadel_of_Insanity/COI_Header.lua",
+			"Experts/Nightmare Tide/Citadel_of_Insanity/Glacieus.lua",
+			"Experts/Nightmare Tide/Citadel_of_Insanity/Cresaphin.lua",
+			"Experts/Nightmare Tide/Citadel_of_Insanity/Skylla.lua",
+			"Experts/Nightmare Tide/Citadel_of_Insanity/Kondraum.lua",
+		
+		-- Glacial Maw
+			"Experts/Nightmare Tide/Glacial_Maw/GM_Header.lua",
+			"Experts/Nightmare Tide/Glacial_Maw/Shigoroth.lua",
+			"Experts/Nightmare Tide/Glacial_Maw/Apotheon.lua",
+			"Experts/Nightmare Tide/Glacial_Maw/Toknoth.lua",
+			"Experts/Nightmare Tide/Glacial_Maw/Mann.lua",
+			
+		-- Gyel Fortress
+			"Experts/Nightmare Tide/Gyel_Fortress/GF_Header.lua",
+			"Experts/Nightmare Tide/Gyel_Fortress/Seathe.lua",
+			"Experts/Nightmare Tide/Gyel_Fortress/Kytus.lua",
+			"Experts/Nightmare Tide/Gyel_Fortress/Nezavar.lua",
+			"Experts/Nightmare Tide/Gyel_Fortress/Glasya.lua",
+			
+		-- Nightmare Coast
+			"Experts/Nightmare Tide/Nightmare_Coast/NC_Header.lua",
+			"Experts/Nightmare Tide/Nightmare_Coast/Hydal.lua",
+			"Experts/Nightmare Tide/Nightmare_Coast/Akylios.lua",
+			"Experts/Nightmare Tide/Nightmare_Coast/Dalraak.lua",
+			"Experts/Nightmare Tide/Nightmare_Coast/Arak.lua",
+		
+		-- Return to Empyrean Core
+			"Experts/Nightmare Tide/Return_to_Empyrean_Core/RTEC_Header.lua",
+			"Experts/Nightmare Tide/Return_to_Empyrean_Core/Baird.lua",
+			"Experts/Nightmare Tide/Return_to_Empyrean_Core/Strauz.lua",
+			"Experts/Nightmare Tide/Return_to_Empyrean_Core/Doctor.lua",
+			"Experts/Nightmare Tide/Return_to_Empyrean_Core/Cor.lua",
+			"Experts/Nightmare Tide/Return_to_Empyrean_Core/Kaliban.lua",
+			
+		-- Return to Iron Tomb
+			"Experts/Nightmare Tide/Return_to_Iron_Tomb/RTIT_Header.lua",
+			"Experts/Nightmare Tide/Return_to_Iron_Tomb/Kings.lua",
+			"Experts/Nightmare Tide/Return_to_Iron_Tomb/Fetlorn.lua",
+			"Experts/Nightmare Tide/Return_to_Iron_Tomb/Ragnoth.lua",
+			"Experts/Nightmare Tide/Return_to_Iron_Tomb/Totek.lua",
+			
+		-- Rhaza'de Canyons
+			"Experts/Nightmare Tide/Rhaza'de_Canyons/RC_Header.lua",
+			"Experts/Nightmare Tide/Rhaza'de_Canyons/Krilladu.lua",
+			"Experts/Nightmare Tide/Rhaza'de_Canyons/Shatterhorn.lua",
+			"Experts/Nightmare Tide/Rhaza'de_Canyons/Mithe.lua",
+			"Experts/Nightmare Tide/Rhaza'de_Canyons/Khadluu.lua",
+			"Experts/Nightmare Tide/Rhaza'de_Canyons/Teth.lua",
+			
+	-- Storm Legion Experts/Rift
+		-- Archives of Flesh
+			"Experts/Storm Legion/Archive_of_Flesh/AOFHeader.lua",
+			"Experts/Storm Legion/Archive_of_Flesh/Tzul.lua",
+			"Experts/Storm Legion/Archive_of_Flesh/Emphalea.lua",
+			"Experts/Storm Legion/Archive_of_Flesh/Ahzrius.lua",
+			"Experts/Storm Legion/Archive_of_Flesh/Vorka.lua",
+			"Experts/Storm Legion/Archive_of_Flesh/Cahail.lua",
+		
+		-- Empyrean Core
+			"Experts/Storm Legion/Empyrean_Core/ECHeader.lua",
+			"Experts/Storm Legion/Empyrean_Core/Baird.lua",
+			"Experts/Storm Legion/Empyrean_Core/Bodyguards.lua",
+			"Experts/Storm Legion/Empyrean_Core/Doctor.lua",
+			"Experts/Storm Legion/Empyrean_Core/Core.lua",
+			"Experts/Storm Legion/Empyrean_Core/Kaliban.lua",
+		
+		-- Exodus of the Storm Queen
+			"Experts/Storm Legion/Exodus_of_the_Storm_Queen/ESQHeader.lua",
+			"Experts/Storm Legion/Exodus_of_the_Storm_Queen/Chekaroth.lua",
+			"Experts/Storm Legion/Exodus_of_the_Storm_Queen/Dominax.lua",
+			"Experts/Storm Legion/Exodus_of_the_Storm_Queen/Grim.lua",
+			"Experts/Storm Legion/Exodus_of_the_Storm_Queen/Valthundr.lua",
+		
+		-- Golem Foundry
+			"Experts/Storm Legion/Golem_Foundry/GFHeader.lua",
+			"Experts/Storm Legion/Golem_Foundry/Bulwark.lua",
+			"Experts/Storm Legion/Golem_Foundry/UV315.lua",
+			"Experts/Storm Legion/Golem_Foundry/C10N3.lua",
+			"Experts/Storm Legion/Golem_Foundry/Liaz.lua",
+			"Experts/Storm Legion/Golem_Foundry/Manslaughter.lua",
+		
+		-- Stormbreaker Protocol
+			"Experts/Storm Legion/Storm_Breaker_Protocol/SBPHeader.lua",
+			"Experts/Storm Legion/Storm_Breaker_Protocol/Zidae.lua",
+			"Experts/Storm Legion/Storm_Breaker_Protocol/Vellion.lua",
+			"Experts/Storm Legion/Storm_Breaker_Protocol/Telaphalon.lua",
+			"Experts/Storm Legion/Storm_Breaker_Protocol/Sandswarm.lua",
+			"Experts/Storm Legion/Storm_Breaker_Protocol/Slagstorm.lua",
+		
+		-- Tower of the Shattered
+			"Experts/Storm Legion/Tower_of_the_Shattered/TOSHeader.lua",
+			"Experts/Storm Legion/Tower_of_the_Shattered/Kronox.lua",
+			"Experts/Storm Legion/Tower_of_the_Shattered/Cowel.lua",
+			"Experts/Storm Legion/Tower_of_the_Shattered/Typhiria.lua",
+			"Experts/Storm Legion/Tower_of_the_Shattered/Primakov.lua",
+			"Experts/Storm Legion/Tower_of_the_Shattered/Thunderscar.lua",
+		
+		-- Unhallowed Boneforge
+			"Experts/Storm Legion/Unhallowed_Boneforge/UBFHeader.lua",
+			"Experts/Storm Legion/Unhallowed_Boneforge/Bruzhail.lua",
+			"Experts/Storm Legion/Unhallowed_Boneforge/Throne.lua",
+			"Experts/Storm Legion/Unhallowed_Boneforge/Ahgnox.lua",
+			"Experts/Storm Legion/Unhallowed_Boneforge/Helix.lua",
+			"Experts/Storm Legion/Unhallowed_Boneforge/Avoxcia.lua",
+	
+	-- Storm Legion Dungeon
+		-- Archives of Flesh
+			"Dungeons/Storm Legion/Archive_of_Flesh/AOFHeader.lua",
+			"Dungeons/Storm Legion/Archive_of_Flesh/Tzul.lua",
+			"Dungeons/Storm Legion/Archive_of_Flesh/Emphalea.lua",
+			"Dungeons/Storm Legion/Archive_of_Flesh/Ahzrius.lua",
+			"Dungeons/Storm Legion/Archive_of_Flesh/Vorka.lua",
+			"Dungeons/Storm Legion/Archive_of_Flesh/Cahail.lua",
+		
+		-- Empyrean Core
+			"Dungeons/Storm Legion/Empyrean_Core/ECHeader.lua",
+			"Dungeons/Storm Legion/Empyrean_Core/Baird.lua",
+			"Dungeons/Storm Legion/Empyrean_Core/Bodyguards.lua",
+			"Dungeons/Storm Legion/Empyrean_Core/Doctor.lua",
+			"Dungeons/Storm Legion/Empyrean_Core/Core.lua",
+			"Dungeons/Storm Legion/Empyrean_Core/Kaliban.lua",
+		
+		-- Exodus of the Storm Queen
+			"Dungeons/Storm Legion/Exodus_of_the_Storm_Queen/ESQHeader.lua",
+			"Dungeons/Storm Legion/Exodus_of_the_Storm_Queen/Chekaroth.lua",
+			"Dungeons/Storm Legion/Exodus_of_the_Storm_Queen/Dominax.lua",
+			"Dungeons/Storm Legion/Exodus_of_the_Storm_Queen/Grim.lua",
+			"Dungeons/Storm Legion/Exodus_of_the_Storm_Queen/Valthundr.lua",
+		
+		-- Golem Foundry
+			"Dungeons/Storm Legion/Golem_Foundry/GFHeader.lua",
+			"Dungeons/Storm Legion/Golem_Foundry/Bulwark.lua",
+			"Dungeons/Storm Legion/Golem_Foundry/UV315.lua",
+			"Dungeons/Storm Legion/Golem_Foundry/C10N3.lua",
+			"Dungeons/Storm Legion/Golem_Foundry/Liaz.lua",
+			"Dungeons/Storm Legion/Golem_Foundry/Manslaughter.lua",
+		
+		-- Stormbreaker Protocol
+			"Dungeons/Storm Legion/Storm_Breaker_Protocol/SBPHeader.lua",
+			"Dungeons/Storm Legion/Storm_Breaker_Protocol/Zidae.lua",
+			"Dungeons/Storm Legion/Storm_Breaker_Protocol/Vellion.lua",
+			"Dungeons/Storm Legion/Storm_Breaker_Protocol/Telaphalon.lua",
+			"Dungeons/Storm Legion/Storm_Breaker_Protocol/Sandswarm.lua",
+			"Dungeons/Storm Legion/Storm_Breaker_Protocol/Slagstorm.lua",
+		
+		-- Tower of the Shattered
+			"Dungeons/Storm Legion/Tower_of_the_Shattered/TOSHeader.lua",
+			"Dungeons/Storm Legion/Tower_of_the_Shattered/Kronox.lua",
+			"Dungeons/Storm Legion/Tower_of_the_Shattered/Cowel.lua",
+			"Dungeons/Storm Legion/Tower_of_the_Shattered/Typhiria.lua",
+			"Dungeons/Storm Legion/Tower_of_the_Shattered/Primakov.lua",
+			"Dungeons/Storm Legion/Tower_of_the_Shattered/Thunderscar.lua",
+		
+		-- Unhallowed Boneforge
+			"Dungeons/Storm Legion/Unhallowed_Boneforge/UBFHeader.lua",
+			"Dungeons/Storm Legion/Unhallowed_Boneforge/Bruzhail.lua",
+			"Dungeons/Storm Legion/Unhallowed_Boneforge/Throne.lua",
+			"Dungeons/Storm Legion/Unhallowed_Boneforge/Ahgnox.lua",
+			"Dungeons/Storm Legion/Unhallowed_Boneforge/Helix.lua",
+			"Dungeons/Storm Legion/Unhallowed_Boneforge/Avoxcia.lua",
+	
+	-- Chronicles
+		-- Queen's Gambit
+			"Chronicles/Storm Legion/Queens_Gambit/CQGHeader.lua",
+			"Chronicles/Storm Legion/Queens_Gambit/Och_and_Krok.lua",
+			"Chronicles/Storm Legion/Queens_Gambit/Kyo.lua",
+			
+	-- Rift Raid 20	
+		-- Infernal Dawn
+			"Raids/Rift/InfernalDawn/INDHeader.lua",
+			"Raids/Rift/InfernalDawn/Drak.lua",
+			"Raids/Rift/InfernalDawn/Gorlach.lua",
+			"Raids/Rift/InfernalDawn/Bouldergut.lua",
+			"Raids/Rift/InfernalDawn/Muglak.lua",
+			"Raids/Rift/InfernalDawn/Ituziel.lua",
+			"Raids/Rift/InfernalDawn/Conclave.lua",
+			"Raids/Rift/InfernalDawn/Maklamos.lua",
+			"Raids/Rift/InfernalDawn/Rusila.lua",
+			"Raids/Rift/InfernalDawn/Laethys.lua",
+			"Raids/Rift/InfernalDawn/Maelforge.lua",
+			"Raids/Rift/InfernalDawn/Maelforge_Final.lua",
+			
+		--Hammerknell (legacy, disabled)
+			-- "Raids/Rift/Hammerknell/HKHeader.lua",
+			-- "Raids/Rift/Hammerknell/Murdantix.lua",
+			-- "Raids/Rift/Hammerknell/Matron.lua",
+			-- "Raids/Rift/Hammerknell/Zilas.lua",
+			-- "Raids/Rift/Hammerknell/Molinar.lua",
+			-- "Raids/Rift/Hammerknell/Sicaron.lua",
+			-- "Raids/Rift/Hammerknell/Estrode.lua",
+			-- "Raids/Rift/Hammerknell/Prime.lua",
+			-- "Raids/Rift/Hammerknell/Grugonim.lua",
+			-- "Raids/Rift/Hammerknell/Garau.lua",
+			-- "Raids/Rift/Hammerknell/Inwar.lua",
+			-- "Raids/Rift/Hammerknell/Akylios.lua",
+			
+		-- River of Souls
+			"Raids/Rift/ROS/ROSHeader.lua",
+			"Raids/Rift/ROS/DarkFoci.lua",
+			"Raids/Rift/ROS/Galenir.lua",
+			"Raids/Rift/ROS/Gaurath.lua",
+			"Raids/Rift/ROS/Plutonus.lua",
+			"Raids/Rift/ROS/Alsbeth.lua",
+			
+		-- Greenscale Blight
+			"Raids/Rift/GSB/GSBHeader.lua",
+			"Raids/Rift/GSB/Letareus.lua",
+			"Raids/Rift/GSB/Johlen.lua",
+			"Raids/Rift/GSB/Aleria.lua",
+			"Raids/Rift/GSB/Hylas.lua",
+			"Raids/Rift/GSB/Greenscale.lua",
+	
+	-- Rift Slivers/Rift
+		--Primeval Feast
+			"Slivers/Rift/Primeval_Feast/PFHeader.lua",
+			"Slivers/Rift/Primeval_Feast/Anchors.lua",
+			"Slivers/Rift/Primeval_Feast/Atrophinius.lua",
+			"Slivers/Rift/Primeval_Feast/Khargorth.lua",
+			"Slivers/Rift/Primeval_Feast/Alltha.lua",
+			"Slivers/Rift/Primeval_Feast/Twyl.lua",
+			
+		-- Rise of the Phoenix
+			"Slivers/Rift/Rise_of_the_Phoenix/ROTPHeader.lua",
+			"Slivers/Rift/Rise_of_the_Phoenix/Ereandorn.lua",
+			"Slivers/Rift/Rise_of_the_Phoenix/Beruhast.lua",
+			"Slivers/Rift/Rise_of_the_Phoenix/Silgen.lua",
+			"Slivers/Rift/Rise_of_the_Phoenix/Arakhurn.lua",
+			
+		-- Glided Prophecy
+			"Slivers/Rift/Gilded_Prophecy/GPHeader.lua",
+			"Slivers/Rift/Gilded_Prophecy/Anrak.lua",
+			"Slivers/Rift/Gilded_Prophecy/Guurloth.lua",
+			"Slivers/Rift/Gilded_Prophecy/Thalguur.lua",
+			"Slivers/Rift/Gilded_Prophecy/Uruluuk.lua",
+			
+		-- Drowned Halls
+			"Slivers/Rift/Drowned_Halls/DHHeader.lua",
+			"Slivers/Rift/Drowned_Halls/Jorb.lua",
+			"Slivers/Rift/Drowned_Halls/Joloral.lua",
+			"Slivers/Rift/Drowned_Halls/Isskal.lua",
+			"Slivers/Rift/Drowned_Halls/Hydriss.lua",
+			
+	-- Rift Master Dungeons
+		-- Caduceus Rise
+			"Masters/Caduceus_Rise/CRHeader.lua",
+			"Masters/Caduceus_Rise/Hergen.lua",
+			"Masters/Caduceus_Rise/Alraj.lua",
+			"Masters/Caduceus_Rise/Coalgut.lua",
+			"Masters/Caduceus_Rise/Zugthak.lua",
+			"Masters/Caduceus_Rise/Zael.lua",
+			"Masters/Caduceus_Rise/Kulir.lua",
+			"Masters/Caduceus_Rise/Rodiafel.lua",
+			"Masters/Caduceus_Rise/Black.lua",
+			"Masters/Caduceus_Rise/Cinderstorm.lua",
+			"Masters/Caduceus_Rise/Caduceus.lua",
+			
+		-- Darkening Deeps
+			"Masters/Darkening_Deeps/DDHeader.lua",
+			"Masters/Darkening_Deeps/Braxtepel.lua",
+			"Masters/Darkening_Deeps/Villizar.lua",
+			"Masters/Darkening_Deeps/Bringhurst.lua",
+			"Masters/Darkening_Deeps/Tegenar.lua",
+			"Masters/Darkening_Deeps/Glubmuk.lua",
+			"Masters/Darkening_Deeps/Council.lua",
+			"Masters/Darkening_Deeps/Scarn.lua",
+			
+	--Rift Expert Dungeons
+		-- Abyssal Precipice
+			"Experts/Rift/Abyssal_Precipice/APHeader.lua",
+			"Experts/Rift/Abyssal_Precipice/Andrenos.lua",
+			"Experts/Rift/Abyssal_Precipice/Icetalon.lua",
+			"Experts/Rift/Abyssal_Precipice/Majolic.lua",
+			"Experts/Rift/Abyssal_Precipice/Renthar.lua",
+			"Experts/Rift/Abyssal_Precipice/Calyx.lua",
+			
+		-- Charmer's Caldera
+			"Experts/Rift/Charmers_Caldera/CCHeader.lua",
+			"Experts/Rift/Charmers_Caldera/Smouldaron.lua",
+			"Experts/Rift/Charmers_Caldera/Cyclorax.lua",
+			"Experts/Rift/Charmers_Caldera/Ryka.lua",
+			"Experts/Rift/Charmers_Caldera/Gronik.lua",
+			"Experts/Rift/Charmers_Caldera/Jultharin.lua",
+			"Experts/Rift/Charmers_Caldera/Caelia.lua",
+		
+		-- Darkening Deeps
+			"Experts/Rift/Darkening_Deeps/DDHeader.lua",
+			"Experts/Rift/Darkening_Deeps/Braxtepel.lua",
+			"Experts/Rift/Darkening_Deeps/Bringhurst.lua",
+			"Experts/Rift/Darkening_Deeps/Tegenar.lua",
+			"Experts/Rift/Darkening_Deeps/Glubmuk.lua",
+			"Experts/Rift/Darkening_Deeps/Council.lua",
+			"Experts/Rift/Darkening_Deeps/Scarn.lua",
+			
+		-- Deepstrike Mines
+			"Experts/Rift/Deepstrike_Mines/DMHeader.lua",
+			"Experts/Rift/Deepstrike_Mines/Markus.lua",
+			"Experts/Rift/Deepstrike_Mines/Krezlav.lua",
+			"Experts/Rift/Deepstrike_Mines/Bonehew.lua",
+			"Experts/Rift/Deepstrike_Mines/Kaleida.lua",
+			"Experts/Rift/Deepstrike_Mines/Dichrom.lua",
+			"Experts/Rift/Deepstrike_Mines/Arcanis.lua",
+			"Experts/Rift/Deepstrike_Mines/Plutonus.lua",
+			
+		-- Fall of Lantern Hook
+			"Experts/Rift/Fall_of_Lantern_Hook/FOLHHeader.lua",
+			"Experts/Rift/Fall_of_Lantern_Hook/Rorf.lua",
+			"Experts/Rift/Fall_of_Lantern_Hook/Cortilnald.lua",
+			"Experts/Rift/Fall_of_Lantern_Hook/Druhl.lua",
+			"Experts/Rift/Fall_of_Lantern_Hook/Ereetu.lua",
+			"Experts/Rift/Fall_of_Lantern_Hook/Oludare.lua",
+			
+		-- Fool Cascade
+			"Experts/Rift/Foul_Cascade/FCHeader.lua",
+			"Experts/Rift/Foul_Cascade/Verosa.lua",
+			"Experts/Rift/Foul_Cascade/Surin.lua",
+			"Experts/Rift/Foul_Cascade/Krasimir.lua",
+			"Experts/Rift/Foul_Cascade/Sparkwing.lua",
+			"Experts/Rift/Foul_Cascade/Maficros.lua",
+			"Experts/Rift/Foul_Cascade/Vallnara.lua",
+			
+		-- King's Breach
+			"Experts/Rift/Kings_Breach/KBHeader.lua",
+			"Experts/Rift/Kings_Breach/Suleng.lua",
+			"Experts/Rift/Kings_Breach/Ravalos.lua",
+			"Experts/Rift/Kings_Breach/Autoch.lua",
+			"Experts/Rift/Kings_Breach/Shadehorror.lua",
+			"Experts/Rift/Kings_Breach/Konstantin.lua",
+			
+		-- Lower Caduceus Rise
+			"Experts/Rift/Lower_Caduceus_Rise/LCRHeader.lua",
+			"Experts/Rift/Lower_Caduceus_Rise/Hergen.lua",
+			"Experts/Rift/Lower_Caduceus_Rise/Alraj.lua",
+			"Experts/Rift/Lower_Caduceus_Rise/Palos.lua",
+			"Experts/Rift/Lower_Caduceus_Rise/Zael.lua",
+			"Experts/Rift/Lower_Caduceus_Rise/Coalgut.lua",
+			
+		-- Runic Descent
+			"Experts/Rift/Runic_Descent/RDHeader.lua",
+			"Experts/Rift/Runic_Descent/Rictus.lua",
+			"Experts/Rift/Runic_Descent/Wormwood.lua",
+			"Experts/Rift/Runic_Descent/Falidor.lua",
+			"Experts/Rift/Runic_Descent/Atrophinius.lua",
+			"Experts/Rift/Runic_Descent/Eliam.lua",
+			
+		-- Iron Tomb
+			"Experts/Rift/The_Iron_Tomb/TITHeader.lua",
+			"Experts/Rift/The_Iron_Tomb/Caor.lua",
+			"Experts/Rift/The_Iron_Tomb/Venoxa.lua",
+			"Experts/Rift/The_Iron_Tomb/Kings.lua",
+			"Experts/Rift/The_Iron_Tomb/Fetlorn.lua",
+			"Experts/Rift/The_Iron_Tomb/Ragnoth.lua",
+			"Experts/Rift/The_Iron_Tomb/Totek.lua",
+			
+		-- The Realm of the Fae
+			"Experts/Rift/The_Realm_of_the_Fae/ROTFHeader.lua",
+			"Experts/Rift/The_Realm_of_the_Fae/Maelow.lua",
+			"Experts/Rift/The_Realm_of_the_Fae/Luggodhan.lua",
+			"Experts/Rift/The_Realm_of_the_Fae/Orban.lua",
+			"Experts/Rift/The_Realm_of_the_Fae/Atrophinius.lua",
+			"Experts/Rift/The_Realm_of_the_Fae/Winterfrost.lua",
+			"Experts/Rift/The_Realm_of_the_Fae/Twyl.lua",
+			
+		-- Upper Caduceus Rise
+			"Experts/Rift/Upper_Caduceus_Rise/UCRHeader.lua",
+			"Experts/Rift/Upper_Caduceus_Rise/Zugthak.lua",
+			"Experts/Rift/Upper_Caduceus_Rise/Rodiafel.lua",
+			"Experts/Rift/Upper_Caduceus_Rise/Black.lua",
+			"Experts/Rift/Upper_Caduceus_Rise/Cinderstorm.lua",
+			"Experts/Rift/Upper_Caduceus_Rise/Kulir.lua",
+			"Experts/Rift/Upper_Caduceus_Rise/Caduceus.lua",
+}
+
+Embed = {
+	["Modules/SafesTableLib"] = true,
+	["Modules/SafesGUILib"] = true,
+	["Modules/SafesUnitLib"] = true,
+	["Modules/SafesBuffLib"] = true,
+	["Modules/SafesCastbarLib"] = true,
+	["KBMLocaleManager"] = true,
+	["Modules/Messenger"] = true,
+	["Modules/TextureHandler"] = true,
+	["Modules/ReadyCheck"] = true,
+}
+
+SavedVariables = {
+	
+	KBMRaid_Settings = "account",
+	KBMSliver_Settings = "account",
+	KBMExpert_Settings = "account",
+	KBMDungeon_Settings = "account",
+	KBMChronicle_Settings = "account",
+	KBMOpenWorld_Settings = "account",
+	
+    -- PoA Raids
+        -- Bastion of Steel
+            KBMPOABOS_Settings = "account",
+            KBMPOABOSAZR_Settings = "account",
+			KBMPOABOSCIS_Settings = "account",
+			KBMPOABOSTX_Settings = "account",
+            chKBMPOABOS_Settings = "character",
+            chKBMPOABOSAZR_Settings = "character",
+			chKBMPOABOSCIS_Settings = "character",
+			chKBMPOABOSTX_Settings = "character",
+        -- Normal Tartaric Depths
+            KBMPOANMTD_Settings = "account",
+            KBMPOANMTDBEL_Settings = "account",
+            KBMPOANMTDTAR_Settings = "account",
+            KBMPOANMTDMAL_Settings = "account",
+            KBMPOANMTDCOF_Settings = "account",
+            chKBMPOANMTD_Settings = "character",
+            chKBMPOANMTDBEL_Settings ="character",
+            chKBMPOANMTDTAR_Settings = "character",
+            chKBMPOANMTDMAL_Settings = "character",
+            chKBMPOANMTDCOF_Settings = "character",
+        -- Intrepid Rise of the Phoenix
+            KBMPOAIROTP_Settings = "account",
+			KBMPOAIROTPEN_Settings = "account",
+			KBMPOAIROTPHA_Settings = "account",
+			KBMPOAIROTPBT_Settings = "account",
+			KBMPOAIROTPGS_Settings = "account",
+			chKBMPOAIROTP_Settings = "character",
+			chKBMPOAIROTPEN_Settings = "character",
+			chKBMPOAIROTPHA_Settings = "character",
+			chKBMPOAIROTPBT_Settings = "character",
+			chKBMPOAIROTPGS_Settings = "character",
+			
+        -- LFR Tartaric Depths
+            KBMPOATD_Settings = "account",
+            KBMPOATDBEL_Settings = "account",
+            KBMPOATDTAR_Settings = "account",
+            KBMPOATDMAL_Settings = "account",
+			KBMPOATDCOF_Settings = "account",
+            chKBMPOATD_Settings = "character",
+            chKBMPOATDBEL_Settings ="character",
+            chKBMPOATDTAR_Settings = "character",
+			chKBMPOATDMAL_Settings = "character",
+			chKBMPOATDCOF_Settings = "character",
+        -- LFR queen's focci
+            KBMPOAQF_Settings = "account",
+            KBMPOAQFHE_Settings = "account",
+            chKBMPOAQF_Settings = "character",
+            chKBMPOAQFHE_Settings = "character",
+	
+    -- PoA Experts
+        -- Intrepid Darkening Deeps
+			KBMPOAIDD_Settings = "account",
+			KBMPOAIDDAB_Settings = "account",
+			KBMPOAIDDMB_Settings = "account",
+			KBMPOAIDDTD_Settings = "account",
+			KBMPOAIDDGK_Settings = "account",
+			KBMPOAIDDTC_Settings = "account",
+			KBMPOAIDDSN_Settings = "account",
+			chKBMPOAIDD_Settings = "character",
+			chKBMPOAIDDAB_Settings = "character",
+			chKBMPOAIDDMB_Settings = "character",
+			chKBMPOAIDDTD_Settings = "character",
+			chKBMPOAIDDGK_Settings = "character",
+			chKBMPOAIDDTC_Settings = "character",
+			chKBMPOAIDDSN_Settings = "character",
+  
+    -- Intrepid Gyel Fortress
+			KBMPOAIGFSEA_Settings = "account",
+			KBMPOAIGFKYT_Settings = "account",
+			KBMPOAIGFNEZ_Settings = "account",
+			KBMPOAIGFGLA_Settings = "account",
+			chKBMPOAIGFSEA_Settings = "character",
+			chKBMPOAIGFKYT_Settings = "character",
+			chKBMPOAIGFNEZ_Settings = "character",
+			chKBMPOAIGFGLA_Settings = "character",
+			
+	-- Enclave Of Ahnket
+			KBMPOAEA_Settings = "account",
+			KBMPOAEASAL_Settings = "account",
+			KBMPOAEAALLA_Settings = "account",
+			KBMPOAEAFRZ_Settings = "account",
+			KBMPOAEAALU_Settings = "account",
+			chKBMPOAEA_Settings = "character",
+			chKBMPOAEASAL_Settings = "character",
+			chKBMPOAEAALLA_Settings = "character",
+			chKBMPOAEAFRZ_Settings = "character",
+			chKBMPOAEAALU_Settings = "character",
+  
+	-- NT Raids/Rift 20
+		-- Mount Sharax
+			KBMNTRDMS_Settings = "account",
+			KBMNTRDMSBLF_Settings = "account",
+			KBMNTRDMSJIN_Settings = "account",
+			KBMNTRDMSIZK_Settings = "account",
+			KBMNTRDMSYRL_Settings = "account",
+			KBMNTRDMSTGR_Settings = "account",
+			chKBMNTRDMS_Settings = "character",
+			chKBMNTRDMSBLF_Settings = "character",
+			chKBMNTRDMSJIN_Settings = "character",
+			chKBMNTRDMSIZK_Settings = "character",
+			chKBMNTRDMSYRL_Settings = "character",
+			chKBMNTRDMSTGR_Settings = "character",
+			
+		-- Tyrant Forge
+			KBMNTRDTF_Settings = "account",
+			KBMNTRDTFJOH_Settings = "account",
+			KBMNTRDTFPKN_Settings = "account",
+			KBMNTRDTFMTC_Settings = "account",
+			chKBMNTRDTF_Settings = "character",
+			chKBMNTRDTFJOH_Settings = "character",
+			chKBMNTRDTFPKN_Settings = "character",
+			chKBMNTRDTFMTC_Settings = "character",
+			
+		-- Kammerknell
+			KBMNTKM_Settings = "account",
+			KBMNTAK_Settings = "account",
+			KBMNTGU_Settings = "account",
+			KBMNTMX_Settings = "account",
+			KBMNTHK_Settings = "account",
+			KBMNTMZ_Settings = "account",
+			KBMNTSZ_Settings = "account",
+			KBMNTSN_Settings = "account",
+			KBMNTVP_Settings = "account",
+			KBMNTES_Settings = "account",
+			KBMNTGR_Settings = "account",
+			KBMNTID_Settings = "account",
+			chKBMNTKM_Settings = "character",
+			chKBMNTAK_Settings = "character",
+			chKBMNTGU_Settings = "character",
+			chKBMNTMX_Settings = "character",
+			chKBMNTHK_Settings = "character",
+			chKBMNTMZ_Settings = "character",
+			chKBMNTSZ_Settings = "character",
+			chKBMNTSN_Settings = "character",
+			chKBMNTVP_Settings = "character",
+			chKBMNTES_Settings = "character",
+			chKBMNTGR_Settings = "character",
+			chKBMNTID_Settings = "character",
+			
+		-- Mind of Madness
+			KBMNTRD_Settings = "account",
+			KBMNTRDPAG_Settings = "account",
+			chKBMNTRD_Settings = "character",
+			chKBMNTRDPAG_Settings = "character",
+			
+		-- Comet of Ahnket
+			KBMNTRDCOA_Settings = "account",
+			KBMNTRDAZA_Settings = "account",
+			KBMNTRDEBL_Settings = "account",
+			KBMNTRDFYR_Settings = "account",
+			KBMNTRDHER_Settings = "account",
+			chKBMNTRDCOA_Settings = "character",
+			chKBMNTRDAZA_Settings = "character",
+			chKBMNTRDEBL_Settings = "character",
+			chKBMNTRDFYR_Settings = "character",
+			chKBMNTRDHER_Settings = "character",
+		
+	--NT Slivers/Rift
+		-- Rhen of Fate
+			KBMNTSLROF_Settings = "account",
+			KBMNTSLROFDRE_Settings = "account",
+			KBMNTSLROFFIN_Settings = "account",
+			KBMNTSLROFHOW_Settings = "account",
+			KBMNTSLROFUNG_Settings = "account",
+			chKBMNTSLROF_Settings = "character",
+			chKBMNTSLROFDRE_Settings = "character",
+			chKBMNTSLROFFIN_Settings = "character",
+			chKBMNTSLROFHOW_Settings = "character",
+			chKBMNTSLROFUNG_Settings = "character",
+			
+		-- Intrepid Glided Prophecy
+			KBMNTIGP_Settings = "account",
+			KBMNTIGPAF_Settings = "account",
+			KBMNTIGPGH_Settings = "account",
+			KBMNTIGPTR_Settings = "account",
+			KBMNTIGPUK_Settings = "account",
+			chKBMNTIGP_Settings = "character",
+			chKBMNTIGPAF_Settings = "character",
+			chKBMNTIGPGH_Settings = "character",
+			chKBMNTIGPTR_Settings = "character",
+			chKBMNTIGPUK_Settings = "character",
+			
+	-- Storm Legion Raid 20
+		-- Binding of blood
+			KBMSLRDBA_Settings = "account",
+			KBMSLRDBAAK_Settings = "account",
+			KBMSLRDBAIR_Settings = "account",
+			KBMSLRDBG_Settings = "account",
+			KBMSLRDBGGS_Settings = "account",
+			KBMSLRDBGTX_Settings = "account",
+			KBMSLRDBL_Settings = "account",
+			KBMSLRDBLLAE_Settings = "account",
+			KBMSLRDBLMAL_Settings = "account",
+			KBMSLRDBM_Settings = "account",
+			KBMSLRDBMMLF_Settings = "account",
+			KBMSLRDBMMAG_Settings = "account",
+			chKBMSLRDBA_Settings = "character",
+			chKBMSLRDBAAK_Settings = "character",
+			chKBMSLRDBAIR_Settings = "character",
+			chKBMSLRDBG_Settings = "character",
+			chKBMSLRDBGGS_Settings = "character",
+			chKBMSLRDBGTX_Settings = "character",
+			chKBMSLRDBL_Settings = "character",
+			chKBMSLRDBLLAE_Settings = "character",
+			chKBMSLRDBLMAL_Settings = "character",
+			chKBMSLRDBM_Settings = "character",
+			chKBMSLRDBMMLF_Settings = "character",
+			chKBMSLRDBMMAG_Settings = "character",
+			
+		-- Planebreaker Bastion
+			KBMSLRDPB_Settings = "account",
+			KBMSLRDPBET_Settings = "account",
+			KBMSLRDPBWT_Settings = "account",
+			KBMSLRDPBPS_Settings = "account",
+			KBMSLRDPBIK_Settings = "account",
+			KBMSLRDPBAB_Settings = "account",
+			chKBMSLRDPB_Settings = "character", 
+			chKBMSLRDPBET_Settings = "character",
+			chKBMSLRDPBWT_Settings = "character",
+			chKBMSLRDPBPS_Settings = "character",
+			chKBMSLRDPBIK_Settings = "character",
+			chKBMSLRDPBAB_Settings = "character",
+			
+		-- Infinity Gate
+			KBMSLRDIG_Settings = "account",
+			KBMSLRDIGBX_Settings = "account",
+			KBMSLRDIGVM_Settings = "account",
+			KBMSLRDIGVN_Settings = "account",
+			chKBMSLRDIG_Settings = "character",
+			chKBMSLRDIGBX_Settings = "character",
+			chKBMSLRDIGVM_Settings = "character",	
+			chKBMSLRDIGVN_Settings = "character",	
+			
+		-- Endless Eclipse
+			KBMSLRDEE_Settings = "account",
+			KBMSLRDEEDG_Settings = "account",
+			KBMSLRDEEKR_Settings = "account",
+			KBMSLRDEEMP_Settings = "account",
+			KBMSLRDEEPR_Settings = "account",
+			KBMSLRDEERS_Settings = "account",
+			chKBMSLRDEE_Settings = "character",
+			chKBMSLRDEEMP_Settings = "character",
+			chKBMSLRDEEDG_Settings = "character",
+			chKBMSLRDEEKR_Settings = "character",
+			chKBMSLRDEEPR_Settings = "character",
+			chKBMSLRDEERS_Settings = "character",
+			
+		-- Frozen Tempest
+			KBMSLRDFT_Settings = "account",
+			KBMSLRDFTCR_Settings = "account",
+			KBMSLRDFTGM_Settings = "account",
+			KBMSLRDFTGA_Settings = "account",
+			KBMSLRDFTKT_Settings = "account",
+			KBMSLRDFTZL_Settings = "account",
+			chKBMSLRDFT_Settings = "character",
+			chKBMSLRDFTCR_Settings = "character",
+			chKBMSLRDFTGM_Settings = "character",
+			chKBMSLRDFTGA_Settings = "character",
+			chKBMSLRDFTKT_Settings = "character",
+			chKBMSLRDFTZL_Settings = "character",
+		
+	-- Storm Legion Slivers/Rift
+		-- Drowned Halls
+			KBMSLSLIDH_Settings = "account",
+			KBMSLSLIDHHH_Settings = "account",
+			KBMSLSLIDHIL_Settings = "account",
+			KBMSLSLIDHRT_Settings = "account",
+			KBMSLSLIDHAJ_Settings = "account",
+			chKBMSLSLIDH_Settings = "character",
+			chKBMSLSLIDHHH_Settings = "character",
+			chKBMSLSLIDHIL_Settings = "character",
+			chKBMSLSLIDHRT_Settings = "character",
+			chKBMSLSLIDHAJ_Settings = "character",
+			
+		-- Grim Awakening
+			KBMSLSLGA_Settings = "account",
+			KBMSLSLGAKZ_Settings = "account",
+			KBMSLSLGAMLK_Settings = "account",
+			KBMSLSLGASAL_Settings = "account",
+			KBMSLSLGAULT_Settings = "account",
+			chKBMSLSLGA_Settings = "character",
+			chKBMSLSLGAKZ_Settings = "character",
+			chKBMSLSLGAMLK_Settings = "character",
+			chKBMSLSLGASAL_Settings = "character",
+			chKBMSLSLGAULT_Settings = "character",
+			
+		-- Triumph of the Dragon Queen
+			KBMSLSLTQ_Settings = "account",
+			KBMSLSLTQCL_Settings = "account",
+			KBMSLSLTQJN_Settings = "account",
+			KBMSLSLTQGT_Settings = "account",
+			KBMSLSLTQGZ_Settings = "account",
+			chKBMSLSLTQ_Settings = "character",
+			chKBMSLSLTQCL_Settings = "character",
+			chKBMSLSLTQJN_Settings = "character",
+			chKBMSLSLTQGT_Settings = "character",
+			chKBMSLSLTQGZ_Settings = "character",
+			
+			
+	-- Nightmare Tide Experts
+		--Citadel of Insanity
+			KBMNTCOIGLA_Settings = "account",
+			KBMNTCOICRE_Settings = "account",
+			KBMNTCOISKY_Settings = "account",
+			KBMNTCOIKON_Settings = "account",
+			chKBMNTCOIGLA_Settings = "character",
+			chKBMNTCOICRE_Settings = "character",
+			chKBMNTCOISKY_Settings = "character",
+			chKBMNTCOIKON_Settings = "character",
+			
+		-- Glacial Maw
+			KBMNTGMSHI_Settings = "account",
+			KBMNTGMAPO_Settings = "account",
+			KBMNTGMTOK_Settings = "account",
+			KBMNTGMMAN_Settings = "account",
+			chKBMNTGMSHI_Settings = "character",
+			chKBMNTGMAPO_Settings = "character",
+			chKBMNTGMTOK_Settings = "character",
+			chKBMNTGMMAN_Settings = "character",
+
+		-- Gyel Fortress
+			KBMNTGFSEA_Settings = "account",
+			KBMNTGFKYT_Settings = "account",
+			KBMNTGFNEZ_Settings = "account",
+			KBMNTGFGLA_Settings = "account",
+			chKBMNTGFSEA_Settings = "character",
+			chKBMNTGFKYT_Settings = "character",
+			chKBMNTGFNEZ_Settings = "character",
+			chKBMNTGFGLA_Settings = "character",
+			
+		-- Nightmare Coast
+			KBMNTNCHYD_Settings = "account",
+			KBMNTNCAKY_Settings = "account",
+			KBMNTNCDTS_Settings = "account",
+			KBMNTNCARK_Settings = "account",
+			chKBMNTNCHYD_Settings = "character",
+			chKBMNTNCAKY_Settings = "character",
+			chKBMNTNCDTS_Settings = "character",
+			chKBMNTNCARK_Settings = "character",
+			
+		-- Return to Empyrean Core
+			KBMNTRTECBAI_Settings = "account",
+			KBMNTRTECSM_Settings = "account",
+			KBMNTRTECDOC_Settings = "account",
+			KBMNTRTECCOR_Settings = "account",
+			KBMNTRTECKAL_Settings = "account",
+			chKBMNTRTECBAI_Settings = "character",
+			chKBMNTRTECSM_Settings = "character",
+			chKBMNTRTECDOC_Settings = "character",
+			chKBMNTRTECCOR_Settings = "character",
+			chKBMNTRTECKAL_Settings = "character",
+			
+		-- Return to Iron Tomb
+			KBMNTRTITK_Settings = "account",
+			KBMNTRTITBF_Settings = "account",
+			KBMNTRTITRD_Settings = "account",
+			KBMNTRTITTA_Settings = "account",
+			chKBMNTRTITK_Settings = "character",
+			chKBMNTRTITBF_Settings = "character",
+			chKBMNTRTITRD_Settings = "character",
+			chKBMNTRTITTA_Settings = "character",
+			
+		-- Rhaza'de Canyons
+			KBMNTRCKRI_Settings = "account",
+			KBMNTRCSHA_Settings = "account",
+			KBMNTRCPLA_Settings = "account",
+			KBMNTRCKHA_Settings = "account",
+			KBMNTRCPLA_Settings = "account",
+			chKBMNTRCKRI_Settings = "character",
+			chKBMNTRCSHA_Settings = "character",
+			chKBMNTRCPLA_Settings = "character",
+			chKBMNTRCKHA_Settings = "character",
+			chKBMNTRCPLA_Settings = "character",
+	
+	-- Storm Legion Expert Dungeons
+		-- Archives of Flesh
+			KBMSLEXAOF_Settings = "account",
+			KBMSLEXAOFTZ_Settings = "account",
+			KBMSLEXAOFEMP_Settings = "account",
+			KBMSLEXAOFAHZ_Settings = "account",
+			KBMSLEXAOFVRK_Settings = "account",
+			KBMSLEXAOFCHL_Settings = "account",
+			chKBMSLEXAOF_Settings = "character",
+			chKBMSLEXAOFTZ_Settings = "character",
+			chKBMSLEXAOFEMP_Settings = "character",
+			chKBMSLEXAOFAHZ_Settings = "character",
+			chKBMSLEXAOFVRK_Settings = "character",
+			chKBMSLEXAOFCHL_Settings = "character",
+		
+		-- Empyrean Core
+			KBMSLEXEC_Settings = "account",
+			KBMSLEXECBAI_Settings = "account",
+			KBMSLEXECKBB_Settings = "account",
+			KBMSLEXECMD_Settings = "account",
+			KBMSLEXECCM_Settings = "account",
+			KBMSLEXECKB_Settings = "account",
+			chKBMSLEXEC_Settings = "character",
+			chKBMSLEXECBAI_Settings = "character",
+			chKBMSLEXECKBB_Settings = "character",
+			chKBMSLEXECMD_Settings = "character",
+			chKBMSLEXECCM_Settings = "character",
+			chKBMSLEXECKB_Settings = "character",
+			
+		-- Exodus of the Storm Queen
+			KBMSLEXSQ_Settings = "account",
+			KBMSLEXSQCH_Settings = "account",
+			KBMSLEXSQDX_Settings = "account",
+			KBMSLEXSQGG_Settings = "account",
+			KBMSLEXSQVR_Settings = "account",
+			chKBMSLEXSQ_Settings = "character",
+			chKBMSLEXSQCH_Settings = "character",
+			chKBMSLEXSQDX_Settings = "character",
+			chKBMSLEXSQGG_Settings = "character",
+			chKBMSLEXSQVR_Settings = "character",	
+			
+		-- Golem Foundry
+			KBMSLEXGF_Settings = "account",
+			KBMSLEXGFBW_Settings = "account",
+			KBMSLEXGFUV_Settings = "account",
+			KBMSLEXGFC1_Settings = "account",
+			KBMSLEXGFSL_Settings = "account",
+			KBMSLEXGFMS_Settings = "account",
+			chKBMSLEXGF_Settings = "character",
+			chKBMSLEXGFBW_Settings = "character",
+			chKBMSLEXGFUV_Settings = "character",
+			chKBMSLEXGFC1_Settings = "character",
+			chKBMSLEXGFSL_Settings = "character",
+			chKBMSLEXGFMS_Settings = "character",
+			
+		-- Stormbreaker Protocol
+			KBMSLEXSBP_Settings = "account",
+			KBMSLEXSBPSBZ_Settings = "account",
+			KBMSLEXSBPVTP_Settings = "account",
+			KBMSLEXSBPTEL_Settings = "account",
+			KBMSLEXSBPSSO_Settings = "account",
+			KBMSLEXSBPBSS_Settings = "account",
+			chKBMSLEXSBP_Settings = "character",
+			chKBMSLEXSBPSBZ_Settings = "character",
+			chKBMSLEXSBPVTP_Settings = "character",
+			chKBMSLEXSBPTEL_Settings = "character",
+			chKBMSLEXSBPSSO_Settings = "character",
+			chKBMSLEXSBPBSS_Settings = "character",
+			
+		-- Tower of the Shattered
+			KBMSLEXTOS_Settings = "account",
+			KBMSLEXTOSKRX_Settings = "account",
+			KBMSLEXTOSOSC_Settings = "account",
+			KBMSLEXTOSCVS_Settings = "account",
+			KBMSLEXTOSPPR_Settings = "account",
+			KBMSLEXTOSGTS_Settings = "account",
+			chKBMSLEXTOS_Settings = "character",
+			chKBMSLEXTOSKRX_Settings = "character",
+			chKBMSLEXTOSOSC_Settings = "character",
+			chKBMSLEXTOSCVS_Settings = "character",
+			chKBMSLEXTOSPPR_Settings = "character",
+			chKBMSLEXTOSGTS_Settings = "character",
+			
+		-- Unhallowed Boneforge
+			KBMSLEXUBF_Settings = "account",
+			KBMSLEXUBFBRZ_Settings = "account",
+			KBMSLEXUBFNCT_Settings = "account",
+			KBMSLEXUBFAHG_Settings = "account",
+			KBMSLEXUBFFLH_Settings = "account",
+			KBMSLEXUBFAVX_Settings = "account",
+			chKBMSLEXUBF_Settings = "character",
+			chKBMSLEXUBFBRZ_Settings = "character",
+			chKBMSLEXUBFNCT_Settings = "character",
+			chKBMSLEXUBFAHG_Settings = "character",
+			chKBMSLEXUBFFLH_Settings = "character",
+			chKBMSLEXUBFAVX_Settings = "character",
+			
+	-- Storm Legion Standard Dungeon
+		-- Archives of Flesh
+			KBMSLNMAOF_Settings = "account",
+			KBMSLNMAOFTZ_Settings = "account",
+			KBMSLNMAOFEMP_Settings = "account",
+			KBMSLNMAOFAHZ_Settings = "account",
+			KBMSLNMAOFVRK_Settings = "account",
+			KBMSLNMAOFCHL_Settings = "account",
+			chKBMSLNMAOF_Settings = "character",
+			chKBMSLNMAOFTZ_Settings = "character",
+			chKBMSLNMAOFEMP_Settings = "character",
+			chKBMSLNMAOFAHZ_Settings = "character",
+			chKBMSLNMAOFVRK_Settings = "character",
+			chKBMSLNMAOFCHL_Settings = "character",
+			
+		-- Empyrean Core
+			KBMSLNMEC_Settings = "account",
+			KBMSLNMECBAI_Settings = "account",
+			KBMSLNMECKBB_Settings = "account",
+			KBMSLNMECMD_Settings = "account",
+			KBMSLNMECCM_Settings = "account",
+			KBMSLNMECKB_Settings = "account",
+			chKBMSLNMEC_Settings = "character",
+			chKBMSLNMECBAI_Settings = "character",
+			chKBMSLNMECKBB_Settings = "character",
+			chKBMSLNMECMD_Settings = "character",
+			chKBMSLNMECCM_Settings = "character",
+			chKBMSLNMECKB_Settings = "character",
+			
+		-- Exodus of the Storm Queen
+			KBMSLNMSQ_Settings = "account",
+			KBMSLNMSQCH_Settings = "account",
+			KBMSLNMSQDX_Settings = "account",
+			KBMSLNMSQGG_Settings = "account",
+			KBMSLNMSQVR_Settings = "account",
+			chKBMSLNMSQ_Settings = "character",
+			chKBMSLNMSQCH_Settings = "character",
+			chKBMSLNMSQDX_Settings = "character",
+			chKBMSLNMSQGG_Settings = "character",
+			chKBMSLNMSQVR_Settings = "character",			
+			
+		-- Golem Foundry
+			KBMSLNMGF_Settings = "account",
+			KBMSLNMGFBW_Settings = "account",
+			KBMSLNMGFUV_Settings = "account",
+			KBMSLNMGFC1_Settings = "account",
+			KBMSLNMGFSL_Settings = "account",
+			KBMSLNMGFMS_Settings = "account",
+			chKBMSLNMGF_Settings = "character",
+			chKBMSLNMGFBW_Settings = "character",
+			chKBMSLNMGFUV_Settings = "character",
+			chKBMSLNMGFC1_Settings = "character",
+			chKBMSLNMGFSL_Settings = "character",
+			chKBMSLNMGFMS_Settings = "character",
+			
+		-- Stormbreaker Protocol
+			KBMSLNMSBP_Settings = "account",
+			KBMSLNMSBPSBZ_Settings = "account",
+			KBMSLNMSBPVTP_Settings = "account",
+			KBMSLNMSBPTEL_Settings = "account",
+			KBMSLNMSBPSSO_Settings = "account",
+			KBMSLNMSBPBSS_Settings = "account",
+			chKBMSLNMSBP_Settings = "character",
+			chKBMSLNMSBPSBZ_Settings = "character",
+			chKBMSLNMSBPVTP_Settings = "character",
+			chKBMSLNMSBPTEL_Settings = "character",
+			chKBMSLNMSBPSSO_Settings = "character",
+			chKBMSLNMSBPBSS_Settings = "character",
+			
+		-- Tower of the Shattered
+			KBMSLNMTOS_Settings = "account",
+			KBMSLNMTOSKRX_Settings = "account",
+			KBMSLNMTOSOSC_Settings = "account",
+			KBMSLNMTOSCVS_Settings = "account",
+			KBMSLNMTOSPPR_Settings = "account",
+			KBMSLNMTOSGTS_Settings = "account",
+			chKBMSLNMTOS_Settings = "character",
+			chKBMSLNMTOSKRX_Settings = "character",
+			chKBMSLNMTOSOSC_Settings = "character",
+			chKBMSLNMTOSCVS_Settings = "character",
+			chKBMSLNMTOSPPR_Settings = "character",
+			chKBMSLNMTOSGTS_Settings = "character",
+			
+		-- Unhallowed Boneforge
+			KBMSLNMUBF_Settings = "account",
+			KBMSLNMUBFBRZ_Settings = "account",
+			KBMSLNMUBFNCT_Settings = "account",
+			KBMSLNMUBFAHG_Settings = "account",
+			KBMSLNMUBFFLH_Settings = "account",
+			KBMSLNMUBFAVX_Settings = "account",
+			chKBMSLNMUBF_Settings = "character",
+			chKBMSLNMUBFBRZ_Settings = "character",
+			chKBMSLNMUBFNCT_Settings = "character",
+			chKBMSLNMUBFAHG_Settings = "character",
+			chKBMSLNMUBFFLH_Settings = "character",
+			chKBMSLNMUBFAVX_Settings = "character",
+			
+	-- Chronicles
+		--Queen's Gambit
+			KBMCRONSLQG_Settings = "account",
+			KBMCRONSLQGOK_Settings = "account",
+			KBMCRONSLQGAK_Settings = "account",
+			chKBMCRONSLQG_Settings = "character",
+			chKBMCRONSLQGOK_Settings = "character",
+			chKBMCRONSLQGAK_Settings = "character",
+			
+	-- Rift Raid 20
+		-- Infernal Dawn
+			KBMIND_Settings = "account",
+			KBMINDWD_Settings = "account",
+			KBMINDGL_Settings = "account",
+			KBMINDBG_Settings = "account",
+			KBMINDMK_Settings = "account",
+			KBMINDML_Settings = "account",
+			KBMINDRS_Settings = "account",
+			KBMINDIZ_Settings = "account",
+			KBMINDEC_Settings = "account",
+			KBMINDLT_Settings = "account",
+			KBMINDMF_Settings = "account",
+			KBMINDMFF_Settings = "account",
+			chKBMIND_Settings = "character",
+			chKBMINDWD_Settings = "character",
+			chKBMINDGL_Settings = "character",
+			chKBMINDBG_Settings = "character",
+			chKBMINDMK_Settings = "character",
+			chKBMINDML_Settings = "character",
+			chKBMINDRS_Settings = "character",
+			chKBMINDIZ_Settings = "character",
+			chKBMINDEC_Settings = "character",
+			chKBMINDLT_Settings = "character",
+			chKBMINDMF_Settings = "character",
+			chKBMINDMFF_Settings = "character",
+		
+		-- Kammerknell (legacy)
+			-- KBMAK_Settings = "account",
+			-- KBMGU_Settings = "account",
+			-- KBMMX_Settings = "account",
+			-- KBMHK_Settings = "account",
+			-- KBMMZ_Settings = "account",
+			-- KBMSZ_Settings = "account",
+			-- KBMSN_Settings = "account",
+			-- KBMVP_Settings = "account",
+			-- KBMES_Settings = "account",
+			-- KBMGR_Settings = "account",
+			-- KBMID_Settings = "account",
+			-- KM_Settings = "account",
+			-- chKBMAK_Settings = "character",
+			-- chKBMGU_Settings = "character",
+			-- chKBMMX_Settings = "character",
+			-- chKBMHK_Settings = "character",
+			-- chKBMMZ_Settings = "character",
+			-- chKBMSZ_Settings = "character",
+			-- chKBMSN_Settings = "character",
+			-- chKBMVP_Settings = "character",
+			-- chKBMES_Settings = "character",
+			-- chKBMGR_Settings = "character",
+			-- chKBMID_Settings = "character",
+			-- chKM_Settings = "character",
+			
+		-- River of Souls
+			KBMROS_Settings = "account",
+			KBMROSDF_Settings = "account",
+			KBMROSWG_Settings = "account",
+			KBMROSPI_Settings = "account",
+			KBMROSHG_Settings = "account",
+			KBMROSAD_Settings = "account",
+			chKBMROS_Settings = "character",
+			chKBMROSDF_Settings = "character",
+			chKBMROSWG_Settings = "character",
+			chKBMROSPI_Settings = "character",
+			chKBMROSHG_Settings = "character",
+			chKBMROSAD_Settings = "character",
+			
+		-- Greenscale Blight
+			KBMGSB_Settings = "account",
+			KBMGSBDL_Settings = "account",
+			KBMGSBIJ_Settings = "account",
+			KBMGSBOA_Settings = "account",
+			KBMGSBPH_Settings = "account",
+			KBMGSBLG_Settings = "account",
+			chKBMGSB_Settings = "character",
+			chKBMGSBDL_Settings = "character",
+			chKBMGSBIJ_Settings = "character",
+			chKBMGSBOA_Settings = "character",
+			chKBMGSBPH_Settings = "character",
+			chKBMGSBLG_Settings = "character",
+	
+	-- Rift Slivers/Rift
+		-- Primeval Feast
+			KBMPF_Settings = "account",
+			KBMPFLA_Settings = "account",
+			KBMPFAN_Settings = "account",
+			KBMPFAR_Settings = "account",
+			KBMPFSK_Settings = "account",
+			KBMPFLT_Settings = "account",
+			chKBMPF_Settings = "character",
+			chKBMPFLA_Settings = "character",
+			chKBMPFAN_Settings = "character",
+			chKBMPFAR_Settings = "character",
+			chKBMPFSK_Settings = "character",
+			chKBMPFLT_Settings = "character",
+		
+		-- Rise of the Phoenix
+			KBMROTP_Settings = "account",
+			KBMROTPEN_Settings = "account",
+			KBMROTPHA_Settings = "account",
+			KBMROTPBT_Settings = "account",
+			KBMROTPGS_Settings = "account",
+			chKBMROTP_Settings = "character",
+			chKBMROTPEN_Settings = "character",
+			chKBMROTPHA_Settings = "character",
+			chKBMROTPBT_Settings = "character",
+			chKBMROTPGS_Settings = "character",
+			
+		-- Glided Prophecy
+			KBMGP_Settings = "account",
+			KBMGPAF_Settings = "account",
+			KBMGPGH_Settings = "account",
+			KBMGPTR_Settings = "account",
+			KBMGPUK_Settings = "account",
+			chKBMGP_Settings = "character",
+			chKBMGPAF_Settings = "character",
+			chKBMGPGH_Settings = "character",
+			chKBMGPTR_Settings = "character",
+			chKBMGPUK_Settings = "character",
+			
+		-- Drowned Halls
+			KBMDH_Settings = "account",
+			KBMDHAJ_Settings = "account",
+			KBMDHJR_Settings = "account",
+			KBMDHIL_Settings = "account",
+			KBMDHHH_Settings = "account",
+			chKBMDH_Settings = "character",
+			chKBMDHAJ_Settings = "character",
+			chKBMDHJR_Settings = "character",
+			chKBMDHIL_Settings = "character",
+			chKBMDHHH_Settings = "character",
+			
+	-- Rift Master Dungeons
+		-- Caduceus Rise
+			KBMMMCR_Settings = "account",
+			KBMMMCRHH_Settings = "account",
+			KBMMMCRFA_Settings = "account",
+			KBMMMCRCT_Settings = "account",
+			KBMMMCRZK_Settings = "account",
+			KBMMMCRAZ_Settings = "account",
+			KBMMMCRKV_Settings = "account",
+			KBMMMCRRL_Settings = "account",
+			KBMMMCRCBS_Settings = "account",
+			KBMMMCRCM_Settings = "account",
+			KBMMMCRCS_Settings = "account",
+			chKBMMMCR_Settings = "character",
+			chKBMMMCRHH_Settings = "character",
+			chKBMMMCRFA_Settings = "character",
+			chKBMMMCRCT_Settings = "character",
+			chKBMMMCRZK_Settings = "character",
+			chKBMMMCRAZ_Settings = "character",
+			chKBMMMCRKV_Settings = "character",
+			chKBMMMCRRL_Settings = "character",
+			chKBMMMCRCBS_Settings = "character",
+			chKBMMMCRCM_Settings = "character",
+			chKBMMMCRCS_Settings = "character",
+			
+		-- Darkening Deeps
+			KBMMMDD_Settings = "account",
+			KBMMMDDAB_Settings = "account",
+			KBMMMDDEV_Seetings = "account",
+			KBMMMDDMB_Settings = "account",
+			KBMMMDDTD_Settings = "account",
+			KBMMMDDGK_Settings = "account",
+			KBMMMDDTC_Settings = "account",
+			KBMMMDDSN_Settings = "account",
+			chKBMMMDD_Settings = "character",
+			chKBMMMDDAB_Settings = "character",
+			chKBMMMDDEV_Settings = "character",
+			chKBMMMDDMB_Settings = "character",
+			chKBMMMDDTD_Settings = "character",
+			chKBMMMDDGK_Settings = "character",
+			chKBMMMDDTC_Settings = "character",
+			chKBMMMDDSN_Settings = "character",
+				
+	-- Rift Experts/Rift Dungeons
+		-- Abyssal Precipice
+			KBMEXAP_Settings = "account",
+			KBMEXAPKA_Settings = "account",
+			KBMEXAPIN_Settings = "account",
+			KBMEXAPMB_Settings = "account",
+			KBMEXAPRR_Settings = "account",
+			KBMEXAPCA_Settings = "account",
+			chKBMEXAP_Settings = "character",
+			chKBMEXAPKA_Settings = "character",
+			chKBMEXAPIN_Settings = "character",
+			chKBMEXAPMB_Settings = "character",
+			chKBMEXAPRR_Settings = "character",
+			chKBMEXAPCA_Settings = "character",
+			
+		-- Charmer's Caldera
+			KBMEXCC_Settings = "account",
+			KBMEXCCSN_Settings = "account",
+			KBMEXCCCX_Settings = "account",
+			KBMEXCCRD_Settings = "account",
+			KBMEXCCCS_Settings = "account",
+			KBMEXCCGK_Settings = "account",
+			KBMEXCCJN_Settings = "account",
+			chKBMEXCC_Settings = "character",
+			chKBMEXCCSN_Settings = "character",
+			chKBMEXCCCX_Settings = "character",
+			chKBMEXCCRD_Settings = "character",
+			chKBMEXCCCS_Settings = "character",
+			chKBMEXCCGK_Settings = "character",
+			chKBMEXCCJN_Settings = "character",
+			
+		-- Darkening Deeps
+			KBMEXDD_Settings = "account",
+			KBMEXDDAB_Settings = "account",
+			KBMEXDDMB_Settings = "account",
+			KBMEXDDTD_Settings = "account",
+			KBMEXDDGK_Settings = "account",
+			KBMEXDDTC_Settings = "account",
+			KBMEXDDSN_Settings = "account",
+			chKBMEXDD_Settings = "character",
+			chKBMEXDDAB_Settings = "character",
+			chKBMEXDDMB_Settings = "character",
+			chKBMEXDDTD_Settings = "character",
+			chKBMEXDDGK_Settings = "character",
+			chKBMEXDDTC_Settings = "character",
+			chKBMEXDDSN_Settings = "character",
+			
+		-- Deepstrike Mines
+			KBMEXDM_Settings = "account",
+			KBMEXDMOM_Settings = "account",
+			KBMEXDMGK_Settings = "account",
+			KBMEXDMBT_Settings = "account",
+			KBMEXDMGA_Settings = "account",
+			KBMEXDMDM_Settings = "account",
+			KBMEXDMCA_Settings = "account",
+			KBMEXDMPS_Settings = "account",
+			chKBMEXDM_Settings = "character",
+			chKBMEXDMOM_Settings = "character",
+			chKBMEXDMGK_Settings = "character",
+			chKBMEXDMBT_Settings = "character",
+			chKBMEXDMGA_Settings = "character",
+			chKBMEXDMDM_Settings = "character",
+			chKBMEXDMCA_Settings = "character",
+			chKBMEXDMPS_Settings = "character",
+			
+		-- Fall of Lantern Hook
+			KBMEXFOLH_Settings = "account",
+			KBMEXFOLHRF_Settings = "account",
+			KBMEXFOLHPC_Settings = "account",
+			KBMEXFOLHFB_Settings = "account",
+			KBMEXFOLHEE_Settings = "account",
+			KBMEXFOLHOF_Settings = "account",
+			chKBMEXFOLH_Settings = "character",
+			chKBMEXFOLHRF_Settings = "character",
+			chKBMEXFOLHPC_Settings = "character",
+			chKBMEXFOLHFB_Settings = "character",
+			chKBMEXFOLHEE_Settings = "character",
+			chKBMEXFOLHOF_Settings = "character",
+			
+		-- Fool Cascade
+			KBMEXFC_Settings = "account",
+			KBMEXFCCS_Settings = "account",
+			KBMEXFCMV_Settings = "account",
+			KBMEXFCKB_Settings = "account",
+			KBMEXFCTM_Settings = "account",
+			KBMEXFCQV_Settings = "account",
+			KBMEXFCSG_Settings = "account",
+			chKBMEXFC_Settings = "character",
+			chKBMEXFCCS_Settings = "character",
+			chKBMEXFCMV_Settings = "character",
+			chKBMEXFCKB_Settings = "character",
+			chKBMEXFCTM_Settings = "character",
+			chKBMEXFCQV_Settings = "character",
+			chKBMEXFCSG_Settings = "character",
+			
+		-- King's Breach
+			KBMEXKB_Settings = "account",
+			KBMEXKBHS_Settings = "account",
+			KBMEXKBRS_Settings = "account",
+			KBMEXKBAM_Settings = "account",
+			KBMEXKBSP_Settings = "account",
+			KBMEXKBKN_Settings = "account",
+			chKBMEXKB_Settings = "character",
+			chKBMEXKBHS_Settings = "character",
+			chKBMEXKBRS_Settings = "character",
+			chKBMEXKBAM_Settings = "character",
+			chKBMEXKBSP_Settings = "character",
+			chKBMEXKBKN_Settings = "character",
+			
+		-- Lower Caduceus Rise
+			KBMEXLCR_Settings = "account",
+			KBMEXLCRHH_Settings = "account",
+			KBMEXLCRAJ_Settings = "account",
+			KBMEXLCRHP_Settings = "account",
+			KBMEXLCRAZ_Settings = "account",
+			KBMEXLCRCT_Settings = "account",
+			KBMEXLCRCS_Settings = "account",
+			chKBMEXLCR_Settings = "character",
+			chKBMEXLCRHH_Settings = "character",
+			chKBMEXLCRFA_Settings = "character",
+			chKBMEXLCRHP_Settings = "character",
+			chKBMEXLCRAZ_Settings = "character",
+			chKBMEXLCRCT_Settings = "character",
+			chKBMEXLCRCS_Settings = "character",
+			
+		-- Runic Descent
+			KBMEXRD_Settings = "account",
+			KBMEXRDRS_Settings = "account",
+			KBMEXRDWD_Settings = "account",
+			KBMEXRDWF_Settings = "account",
+			KBMEXRDAF_Settings = "account",
+			KBMEXRDEC_Settings = "account",
+			chKBMEXRD_Settings = "character",
+			chKBMEXRDRS_Settings = "character",
+			chKBMEXRDWD_Settings = "character",
+			chKBMEXRDWF_Settings = "character",
+			chKBMEXRDAF_Settings = "character",
+			chKBMEXRDEC_Settings = "character",
+			
+		-- Iron Tomb
+			KBMEXTIT_Settings = "account",
+			KBMEXTITCA_Settings = "account",
+			KBMEXTITBV_Settings = "account",
+			KBMEXTITTK_Settings = "account",
+			KBMEXTITBF_Settings = "account",
+			KBMEXTITRD_Settings = "account",
+			KBMEXTITTA_Settings = "account",
+			chKBMEXTIT_Settings = "character",
+			chKBMEXTITCA_Settings = "character",
+			chKBMEXTITBV_Settings = "character",
+			chKBMEXTITTK_Settings = "character",
+			chKBMEXTITBF_Settings = "character",
+			chKBMEXTITRD_Settings = "character",
+			chKBMEXTITTA_Settings = "character",
+			
+		-- The Realm of the Fae
+			KBMEXROTF_Settings = "account",
+			KBMEXROTFTM_Settings = "account",
+			KBMEXROTFLN_Settings = "account",
+			KBMEXROTFGO_Settings = "account",
+			KBMEXROTFBA_Settings = "account",
+			KBMEXROTFCW_Settings = "account",
+			KBMEXROTFLT_Settings = "account",
+			chKBMEXROTF_Settings = "character",
+			chKBMEXROTFTM_Settings = "character",
+			chKBMEXROTFLN_Settings = "character",
+			chKBMEXROTFGO_Settings = "character",
+			chKBMEXROTFBA_Settings = "character",
+			chKBMEXROTFCW_Settings = "character",
+			chKBMEXROTFLT_Settings = "character",
+			
+		-- Upper Caduceus Rise
+			KBMEXUCR_Settings = "account",
+			KBMEXUCRZK_Settings = "account",
+			KBMEXUCRRL_Settings = "account",
+			KBMEXUCRCBS_Settings = "account",
+			KBMEXUCRCM_Settings = "account",
+			KBMEXUCRKV_Settings = "account",
+			KBMEXUCRCS_Settings = "account",
+			chKBMEXUCR_Settings = "character",
+			chKBMEXUCRZK_Settings = "character",
+			chKBMEXUCRRL_Settings = "character",
+			chKBMEXUCRCBS_Settings = "character",
+			chKBMEXUCRKV_Settings = "character",
+			chKBMEXUCRCM_Settings = "character",
+			chKBMUCRCS_Settings = "character",
+			
+	KBM_GlobalOptions = "account",	
+	chKBM_GlobalOptions = "character",
+}
+
+Dependencies = {
+	SafesTableLib = {"required", "before"},
+	SafesGUILib = {"required", "before"},
+	SafesUnitLib = {"required", "before"},
+	SafesBuffLib = {"required", "before"},
+	SafesCastbarLib = {"required", "before"},
+	KBMLocaleManager = {"required", "before"},
+	KBMTextureHandler = {"required", "before"},
+	KBMMessenger = {"required", "after"},
+	KBMReadyCheck = {"required", "after"},
+	KBMMarkIt = {"optional", "after"},
+	KBMAddWatch = {"optional", "after"},
+	BuffInfo = {"optional", "after"},
+}
+-- X-Curse-Packaged-Version: r801
+-- X-Curse-Project-Name: King Boss Mods
+-- X-Curse-Project-ID: king-molinator
+-- X-Curse-Repository-ID: rift/king-molinator/mainline

@@ -1,0 +1,36 @@
+﻿Identifier = "KBMReadyCheck"
+
+Name = "KBM: Ready Check"
+NameShort = "KBM Ready Check"
+
+Description = "King Boss Mods Ready Check module for Raiding."
+
+Author = "Paul Snart"
+Website = "http://twitter.com/#!/psnart"
+Email = "kingbossmods@gmail.com"
+
+Version = "0.4.0"
+
+Environment = "3.0"
+
+RunOnStartup = {
+	"ReadyCheck.lua",
+}
+
+SavedVariables = {
+	KBMRCM_Settings = "account",
+	chKBMRCM_Settings = "character",
+}
+
+Dependencies = {
+	SafesBuffLib = {"required", "before"},
+	KingMolinator = {"required", "before"},
+}
+-- X-Curse-Packaged-Version: r790
+-- X-Curse-Project-Name: King Boss Mods
+-- X-Curse-Project-ID: king-molinator
+-- X-Curse-Repository-ID: rift/king-molinator/mainline
+-- X-Curse-Packaged-Version: r801
+-- X-Curse-Project-Name: King Boss Mods
+-- X-Curse-Project-ID: king-molinator
+-- X-Curse-Repository-ID: rift/king-molinator/mainline
