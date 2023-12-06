@@ -1,0 +1,18 @@
+﻿Identifier = "dbc"
+ 
+Name = "DeBuffWatcher"
+ 
+Description = "This addon check your raid buffs and debuffs.\n\n/dbw check - start raid buff check\n/dbw me - monitor only my weaponstone, flask, bufffood and eternal (switch on/off default is off)\n/dbw font=X - to change font size (default=12)\n/dbw background=X - to change background transparency (X = 0 - 100)\n/dbw seconds=X - Remaining time of the buffs until a warning occurs in seconds(X = 0 - 600)\n/dbw reset - restore the default settings"
+ 
+Author = "Bamu"
+ 
+Version = "1.12"
+ 
+Email = "Bamu@Brutwacht"
+ 
+Environment = "1.3"
+ 
+RunOnStartup = {
+    "DeBuffWatcher.lua",
+}
+SavedVariables = {DeBuffWatcher_config = 'account'}
