@@ -1,0 +1,5 @@
+package-as: King-Molinator
+
+manual-changelog:
+    filename: Changelog.txt
+    markup-type: creole
