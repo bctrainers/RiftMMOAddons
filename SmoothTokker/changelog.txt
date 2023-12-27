@@ -1,0 +1,61 @@
+Smooth_Tokker_Changelog = {
+
+  ['0.5 rc 1'] = {
+    Fixes = [[
+The complete solve state is now saved, not just the cell values.
+Label on the SOLVE/UNSOLVE button should stay correct.
+Fixed utils.openpackage so it does not try to copy special variables like _NAME.
+Fixed argument to the call to openpackage() in sudoku.lua.
+Changing the global ui scale will no longer cause grid lines to disappear.
+]],
+    Improvements = [[
+Saved variables are now checked by the Event.Addon.SavedVariables.Load.End event
+  handler.
+Text based cells have been added so that grid commands can work when the gui is
+  not loaded. All functionality is now available through the chat interface.
+The following commands were added: scale, autoprint, value, print.
+Added the ability to have more than one command per line.
+In-game help is now more detailed and broken into several topics.
+The 'nuke' command is no longer needed and has been removed.
+Errors resulting from mistyped commands no longer produce an error window.
+]],
+    Code Futzing = [[
+Moved code creating UI colors to its own file.
+Changed colors to an HSL based system.
+Some code has been moved from main.lua to UI.lua. Also, the UI loading is now
+  more flexible.
+Size calculations for the gui are now based on cell height in the grid, rather
+than the overall window height.
+]],
+  },
+
+  ['0.5 beta 2'] = {
+    Fixes = [[
+Fixed hidden test function.
+Fixed bug in module() function of planetouchedmodules that caused it to fail when 
+called without options.
+Fixed typo that killed the 'row', 'column', and 'region' commands.
+Pressing 'SOLVE' will now exit keyboard input mode.
+Replaced code to deal with unsolvable sudoku grids.
+]],
+    Unimprovements = [[
+QA department taken out back and fed to the frogues. Fortunately, I don't taste very good.
+]],
+    Improvements = [[
+Implemented the 'nuke' command.
+Any chat command will, if needed, initialize UI before executing.
+Added functionality to utils and object modules in libsudoku. Other modules have been
+substantially rewritten but are not finished.
+Cleaned up some formatting and removed old code detritus.
+]],
+    Possible_improvements = [[
+Changed size calculations for interface widgets to try to prevent missing grid lines.
+]],
+  },
+
+  ['0.5 beta'] = {
+    Possible_improvements = [[
+Initial release.
+]],
+  },
+}

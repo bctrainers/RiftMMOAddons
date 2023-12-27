@@ -1,0 +1,120 @@
+﻿Identifier = "SmoothTokker"
+ 
+Name = "Smooth Tokker"
+
+NameShort = "Tokker"
+ 
+Description = "A sudoku solver for use in the Tok's Proving Grounds dungeon."
+ 
+Author = "Quietmagpie@Laethys"
+ 
+Version = "0.5 rc 1"
+ 
+Email = "my@email"
+ 
+Environment = "4.1"
+ 
+RunOnStartup = {
+  "colors.lua",
+  "cell.lua",
+  "UI.lua",
+  "main.lua",
+}
+
+Embed = {
+    ["lib/libsudoku"] = true,
+    ["lib/LibSimpleWidgets"] = true,
+}
+
+Dependencies = {
+--    nkDebug = {"optional", "before"},
+    LibSimpleWidgets = {"required", "before"},
+    libsudoku = {"required", "before"},
+}
+
+SavedVariables = {
+  tokker_cellvalues = 'character',
+  tokker_holdvalues = 'character',
+  tokker_position = 'character',
+  tokker_autoprint = 'character',
+  tokker_scale = 'character',
+}
+
+--[[    Usage    ]]--
+
+helptext = {
+
+  header = 'Smooth Tokker Sudoku Solver',
+
+  basic = {'Type <font color="#7f5fff">/tokker</font> in chat to toggle the Smooth Tokker window open or closed.',
+           'Note: closing the window does not free system resources used by the window, which requires a <font color="#7f5fff">/reloadui</font>',
+           '',
+           'Most chat commands can be abbreviated to a single letter, which will be underlined in command lists.',
+           '',
+          },
+
+  command = '* <font color="#7f5fff">/tokker %s</font> - %s',
+
+  basic_commands = {
+    {'', 'Toggles the Smooth Tokker window open or closed.'},
+  },
+
+  help_topics = {
+    {'<u>h</u>elp', 'Detail on graphical inteface usage and a list of further help topics'},
+    {'help con<u>f</u>ig', 'Details on configuration commands'},
+    {'help <u>t</u>ext', 'Details on the text interface (all addon functionality is available via chat commands)'},
+    {'help co<u>m</u>mands', 'Complete list of chat commands'},
+  },
+
+  mouse = {
+    '* Left clicking a grid cell highlights the cell as active and enters keyboard input mode.',
+    '* In input mode, type a digit 1-9 to set the active cell value. Space bar or 0 clears the cell.',
+    '* To change the active cell, left click another cell or use the arrow keys or AWSD.',
+    '* To exit input mode, press the Return (or Enter) key.',
+    '* Right clicking a cell clears it.',
+    '* When the cursor is over a grid cell, the scroll wheel can be used to change the cell\'s value.',
+    '* Right clicking or using the scroll wheel will end input mode, if it is active.',
+    '* The SOLVE button searches for a solution that fits the current grid values.',
+    '* While a solution is displayed, the UNSOLVE button will revert the grid to its prior state.',
+    '* The RESET button clears the entire grid.',
+    '* The grid state is persistent between logins.',
+  },
+
+  config = {
+    [[* <font color="#7f5fff">/tokker scale [x]</font> - Sets the scale factor for drawing the Smooth Tokker window to [x]; default is 1.0; if the window has been opened during the current session, a <font color="#7f5fff">/reloadui</font> is necessary for the new scale to take effect.]],
+    [[* <font color="#7f5fff">/tokker <u>a</u>utoprint</font> - Toggles the autoprint setting; when autoprint is on and the window is closed, the grid state is printed to the chat window after each command.]],
+  },
+
+  config_commands = {
+    {'scale [x]', [[Set the scale factor for the Smooth Tokker window to [x].]]},
+    {'<u>a</u>utoprint', [[Toggle the autoprint setting.]]},
+  },
+
+  text_commands = {
+    {'<u>r</u>ow [n] [digits]', [[Assign values to row [n] from the string of [digits].]]},
+    {'<u>c</u>olumn [n] [digits]', [[Assign values to column [n] from the string of [digits].]]},
+    {'re<u>g</u>ion [n] [digits]', [[Assign values to the 3x3 region [n] from the string of [digits].]]},
+    {'<u>v</u>alue [r] [c] [digit]', [[Set the grid cell with row [r] and column [c] to [digit].]]},
+    {'<u>s</u>olve', [[Search for a solution that fits the current grid values.]]},
+    {'<u>u</u>nsolve', [[Revert a solved grid to its prior state.]]},
+    {'<u>p</u>rint', [[Print the grid state to the chat window.]]},
+    {'reset', [[Clear the grid.]]},
+  },
+
+  text_intro = {
+    [[The commands below may be used to operate the addon entirely via the chat window.]],
+    '',
+    [[For the value command, the digit may be 0 or omitted to clear the cell.]],
+    [[For the assignment commands (row, column, region), an empty cell is represented by 0 in the digit string, and trailing 0s are not necessary.]],
+    [[For example, the following command would set the middle 3 cells of the fourth row:]],
+    [[  /tokker r 4 000257]],
+  },
+
+  text_series = {
+    [[* Unlike the other commands in this addon, the ones listed above may be combined into a single directive.]],
+    [[* Commands appearing on the same line should be separated by commas.]],
+    [[* Example: suppose you notice that one of the clues you used to solve a grid is in the wrong cell, all the steps to fix the problem could be combined into one line:]],
+    [[  /tokker u, v 2 3, v 2 4 9, s, p]],
+  },
+
+}

@@ -1,0 +1,26 @@
+Identifier = 'libsudoku'
+
+Name = 'Sudoku Solver Library'
+
+NameShort = 'libsudoku'
+
+Description = 'A library for solving sudoku puzzles of various sizes.'
+
+Author = 'Quietmagpie@Laethys'
+
+Version = '0.5 rc 1'
+
+Email = 'my@email'
+
+Environment = '4.1'
+
+RunOnStartup = {
+  'planetouchedmodules.lua',
+  'utils.lua',
+  'object.lua',
+  'array.lua',
+  'groups.lua',
+  'cell.lua',
+  'sudoku.lua',
+  'coda.lua',
+}
